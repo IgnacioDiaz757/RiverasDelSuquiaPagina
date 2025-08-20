@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Riveras del Suquía</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <style>.whatsapp-float {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  bottom: 170px; 
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+</style>
+
+
+
+    <!-- Favicon -->
+    <link href="img/logo_transparente_refinado (1).webp" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+<style>
+  /* Botón flotante arriba a la derecha */
+  #modo-toggle {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    z-index: 9999;
+    cursor: pointer;
+    font-size: 24px;
+    background: #ffffffaa;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+  }
+
+  #modo-toggle:hover {
+    background: #eeeeee;
+  }
+
+  #modo-toggle i {
+    color: #111;
+  }
+
+  /* Modo oscuro */
+  body.dark-mode {
+    background-color: #121212 !important;
+    color: white !important;
+  }
+
+  body.dark-mode .navbar,
+  body.dark-mode .about-text,
+  body.dark-mode .service-item,
+  body.dark-mode .card,
+  body.dark-mode .card-body,
+  body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+    color: white !important;
+  }
+
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode p,
+  body.dark-mode a,
+  body.dark-mode li,
+  body.dark-mode span,
+  body.dark-mode small {
+    color: white !important;
+  }
+</style>
+
+<style>
+/* Texto principal dentro del acordeón en modo oscuro */
+body.dark-mode .card,
+body.dark-mode .card-body,
+body.dark-mode .card-header,
+body.dark-mode .btn-link,
+body.dark-mode .btn-link span,
+body.dark-mode .btn-link i {
+  color: #f0f0f0 !important;
+}
+
+/* Fondo oscuro para que contraste bien */
+body.dark-mode .card,
+body.dark-mode .card-body,
+body.dark-mode .card-header {
+  background-color: #1e1e1e !important;
+}
+
+/* Títulos de la sección */
+body.dark-mode h2,
+body.dark-mode h6,
+body.dark-mode p {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .navbar-nav.bg-white {
+  background-color: #2c2c2c !important;
+}
+
+body.dark-mode .navbar-nav .nav-link {
+  color: white !important;
+}
+
+
+
+</style>
+</head>
+<body>
+
+    <div id="modo-toggle">
+  <i id="icono-modo" class="fas fa-moon"></i>
+</div> 
+
+    <!--Whatsapp Logo -->
+   <a href="https://wa.me/5493513913162" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com</p>
+                        <p class="text-body px-3">|</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+54 9 351 391 3162</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="https://www.facebook.com/riverasdelsuquia">
+                       <i class="fab fa-facebook-f social-icon" style="--i:1"></i>
+                    </a>
+                  <a class="text-primary px-3" href="https://www.tiktok.com/@riverasdelsuquia">
+                <i class="fab fa-tiktok social-icon" style="--i:2"></i>
+             </a>
+          <a class="text-primary px-3" href="https://www.instagram.com/riverasdelsuquia/">
+           <i class="fab fa-instagram social-icon" style="--i:3"></i>
+            </a>
+              <a class="text-primary pl-3" href="https://www.youtube.com/@RiverasdelSuquia2025">
+                <i class="fab fa-youtube social-icon" style="--i:4"></i>
+                  </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid position-relative nav-bar p-0">
+  <div class="container-lg position-relative p-0 px-4 px-lg-4" style="z-index: 9;">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-1 px-3">
+
+      <a href="index.html" class="navbar-brand d-flex align-items-center flex-column text-left" style="padding-top: 4px; padding-bottom: 4px;">
+        <div class="logo-container">
+  <img src="img/logo_transparente_refinado (1).webp" alt="Logo Cooperativa" class="logo-animado" style="height: 140px; margin-right: 10px;">
+</div>
+        <div class="d-flex flex-column align-items-start" style="line-height: 1;">
+          
+          
+          </h1>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 6px;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+        <div class="navbar-nav d-flex flex-wrap py-1 px-2 bg-white rounded shadow-sm" style="font-size: 0.85rem;">
+          <a href="index.html" class="nav-item nav-link px-2 py-1">Inicio</a>
+          <a href="about.html" class="nav-item nav-link px-2 py-1">Nosotros</a>
+          <a href="service.html" class="nav-item nav-link px-2 py-1">Servicios</a>
+          <a href="package.html" class="nav-item nav-link px-2 py-1">Obras</a>
+          <a href="ConsejoDeHigieneySeguridad.html" class="nav-item nav-link px-2 py-1">Higiene y Seguridad</a>
+          <a href="misionvision.html" class="nav-item nav-link px-2 py-1">Misión/Visión</a>
+          <a href="asociados.html" class="nav-item nav-link px-2 py-1">Asociados</a>
+          <a href="Proveedores.html" class="nav-item nav-link px-2 py-1">Proveedores</a>
+          <a href="Contratistas.html" class="nav-item nav-link px-2 py-1">Clientes</a>
+          <a href="origencoop.html" class="nav-item nav-link px-2 py-1">Origen Cooperativa</a>
+          <a href="ServiciosAsociados.html" class="nav-item nav-link px-2 py-1">¿Qué es una Cooperativa?</a>
+          <a href="ServicioBeneficio.html" class="nav-item nav-link px-2 py-1">Beneficios</a>
+          <a href="contact.html" class="nav-item nav-link px-2 py-1">Contacto</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- Navbar End -->
+ <!-- Sección Asociados -->
+<div class="container py-5">
+  <h2 class="text-center text-primary mb-4">Asociados</h2>
+  <div class="row justify-content-center">
+    <div class="col-lg-8 text-center">
+      <p>
+        La cooperativa <strong>Riveras del Suquía</strong> reconoce que sus asociados son la base fundamental de su crecimiento.
+        Ser asociado implica formar parte activa de un modelo solidario que busca generar oportunidades de trabajo digno,
+        crecimiento colectivo y bienestar social.
+      </p>
+      <p>
+        Ofrecemos a nuestros asociados:
+      </p>
+      <ul class="list-unstyled text-left d-inline-block">
+        <li><i class="fas fa-check-circle text-primary mr-2"></i>Participación en las asambleas.</li>
+        <li><i class="fas fa-check-circle text-primary mr-2"></i>Capacitaciones permanentes y herramientas de formación.</li>
+        <li><i class="fas fa-check-circle text-primary mr-2"></i>Acceso prioritario a proyectos y obras.</li>
+        <li><i class="fas fa-check-circle text-primary mr-2"></i>Acompañamiento legal y técnico.</li>
+      </ul>
+
+      <p class="mt-4">
+        Si aún no sos asociado, podés unirte completando el formulario de ingreso y presentando tu documentación.
+      </p>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQz25YIEb2M837j-78aU-fNmSXPRT_i0Yb49ddCmSqKoUraQ/viewform?usp=dialog" class="btn btn-primary mt-3" target="_blank">
+        <i class="fas fa-file-download mr-2"></i>Formulario de Ingreso
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Fin Sección Asociados -->
+ <script>
+  const toggle = document.getElementById("modo-toggle");
+  const icono = document.getElementById("icono-modo");
+
+  // Verifica si ya hay una preferencia guardada
+  if (localStorage.getItem("modo") === "oscuro") {
+    document.body.classList.add("dark-mode");
+    icono.classList.remove("fa-moon");
+    icono.classList.add("fa-sun");
+  }
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      icono.classList.remove("fa-moon");
+      icono.classList.add("fa-sun");
+      localStorage.setItem("modo", "oscuro");
+    } else {
+      icono.classList.remove("fa-sun");
+      icono.classList.add("fa-moon");
+      localStorage.setItem("modo", "claro");
+    }
+  });
+</script>
+
+<!-- jQuery y Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+   
+
+ </body>
+</html>

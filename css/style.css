@@ -10087,6 +10087,103 @@ body.dark-mode .mv-title {
   color: #90caf9;
 }
 
+.filter-btn.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.beneficios-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.beneficios-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.empresa {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.empresa img {
+  max-width: 100px;
+  margin: auto;
+  display: block;
+  filter: grayscale(30%);
+  transition: all 0.3s ease;
+}
+
+.empresa:hover {
+  transform: scale(1.1);
+}
+
+.empresa:hover img {
+  filter: grayscale(0%);
+}
+
+.empresa::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c3e50;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.empresa:hover::after {
+  opacity: 1;
+}
+
+.muchos-mas {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #16a085;
+}
+
+
 
 
 

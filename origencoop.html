@@ -195,7 +195,7 @@ body.dark-mode .navbar-nav .nav-link {
 
       <a href="index.html" class="navbar-brand d-flex align-items-center flex-column text-left" style="padding-top: 4px; padding-bottom: 4px;">
         <div class="logo-container">
-  <img src="img/logo_transparente_refinado (1).webp" alt="Logo Cooperativa" class="logo-animado" style="height: 140px; margin-right: 10px;">
+  <img src="img/Alimentaria San Francisco/Copia de Copia de Riveras del sur- Isologo colores.png" alt="Logo Cooperativa" class="logo-animado" style="height: 140px; margin-right: 10px;">
 </div>
         <div class="d-flex flex-column align-items-start" style="line-height: 1;">
           
@@ -274,6 +274,118 @@ body.dark-mode .navbar-nav .nav-link {
 </div>
 
 
+<!-- Cooperativa en Números Start -->
+<div class="container-fluid py-5 bg-light" id="cooperativa-numeros">
+  <div class="container pt-5 pb-3">
+    <div class="text-center mb-5">
+      <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestra Cooperativa</h6>
+      <h1>La Cooperativa en Números</h1>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+          <i class="fa-solid fa-users fa-2x text-primary mb-4"></i>
+          <h2 class="text-primary mb-2 counter" data-target="900">0</h2>
+          <h5 class="mb-2">Asociados</h5>
+          <p class="m-0">Miembros que conforman nuestra cooperativa.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+          <i class="fa-solid fa-road fa-2x text-primary mb-4"></i>
+          <h2 class="text-primary mb-2 counter" data-target="30">0</h2>
+          <h5 class="mb-2">Obras Realizadas</h5>
+          <p class="m-0">Proyectos finalizados en distintas localidades.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+          <i class="fa-solid fa-calendar-check fa-2x text-primary mb-4"></i>
+          <h2 class="text-primary mb-2 counter" data-target="15">0</h2>
+          <h5 class="mb-2">Años de Trayectoria</h5>
+          <p class="m-0">Experiencia y compromiso con el trabajo cooperativo.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+          <i class="fa-solid fa-handshake fa-2x text-primary mb-4"></i>
+          <h2 class="text-primary mb-2 counter" data-target="50">0</h2>
+          <h5 class="mb-2">Clientes</h5>
+          <p class="m-0">Instituciones y empresas que confían en nosotros.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+          <i class="fa-solid fa-school fa-2x text-primary mb-4"></i>
+          <h2 class="text-primary mb-2 counter" data-target="5">0</h2>
+          <h5 class="mb-2"> Oficinas</h5>
+          <p class="m-0">Oficinas administrativas.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+          <i class="fa-solid fa-car fa-2x text-primary mb-4"></i>
+          <h2 class="text-primary mb-2 counter" data-target="7">0</h2>
+          <h5 class="mb-2">5 Vehiculos, 2 tractores</h5>
+          <p class="m-0"></p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+          <i class="fa-solid fa-wrench fa-2x text-primary mb-4"></i>
+          <h2 class="text-primary mb-2 counter" data-target="3000">0</h2>
+          <h5 class="mb-2">Herramientas</h5>
+          <p class="m-0">Diferentes tipos</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- Cooperativa en Números End -->
+
+<script>
+// Animación contador
+const counters = document.querySelectorAll('.counter');
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+
+      const increment = target / 200; // Velocidad del contador
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 25);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+};
+
+// Detectar cuando la sección entra en viewport
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      observer.disconnect(); // Solo animar una vez
+    }
+  });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector('#cooperativa-numeros'));
+</script>
 
 
 
@@ -296,6 +408,89 @@ body.dark-mode .navbar-nav .nav-link {
 <!-- jQuery y Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+    <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <a href="" class="navbar-brand">
+                <h1 class="text-primary"><span class="text-white">RIVE</span>RAS</h1>
+            </a>
+            <p>Compromiso con el territorio, el ambiente y la dignidad laboral.</p>
+            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Seguinos</h6>
+            <div class="d-flex justify-content-start">
+                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.tiktok.com/@riverasdelsuquia"><i class="fab fa-tiktok"></i></a>
+                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/riverasdelsuquia"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.youtube.com/@RiverasdelSuquia2025"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/riverasdelsuquia/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Nuestros Servicios</h5>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
+                <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Lugar</a>
+                <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Obras</a>
+                <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Te guiamos</a>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Rafael Nuñez 4558</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>3512606190</p>
+            <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com.ar</p>
+            
+            <!-- Mapa pequeño -->
+            <div style="width: 280px; height: 150px; margin-top: 15px; border: 1px solid rgba(255,255,255,0.2);">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8020959884434!2d-64.23836862539997!3d-31.36443999374027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329936b187beb3%3A0xe8a8cf2c43bc0a9c!2sAv.%20Rafael%20N%C3%BA%C3%B1ez%204558%2C%20X5009CFZ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1752594078311!5m2!1ses!2sar"
+    width="100%"
+    height="150"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+            <p class="m-0 text-white-50">Copyright &copy; <a href="https://mipaginaweb-seven.vercel.app/">Ignacio Diaz</a>. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 text-center text-md-right">
+            <p class="m-0 text-white-50">Designed by Ignacio Diaz</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 
 </body>
 

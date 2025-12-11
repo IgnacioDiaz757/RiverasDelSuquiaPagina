@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -128,7 +128,348 @@ body.dark-mode .navbar-nav .nav-link {
   color: white !important;
 }
 
+/* ============================================
+   HEADER CORPORATIVO PROVEEDORES
+   ============================================ */
+.page-header-proveedores {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 50%, #004085 100%);
+  position: relative;
+  overflow: hidden;
+}
 
+.page-header-proveedores::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.header-overlay-proveedores {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.header-icon-proveedores {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.header-icon-proveedores i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.header-divider-proveedores {
+  width: 80px;
+  height: 4px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* ============================================
+   SECCIÓN INTRODUCCIÓN
+   ============================================ */
+.intro-proveedores-section {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 20px;
+}
+
+.intro-proveedores-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.intro-proveedores-header {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  padding: 50px 40px;
+  text-align: center;
+  color: white;
+}
+
+.intro-proveedores-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.intro-proveedores-body {
+  padding: 50px 40px;
+}
+
+.intro-proveedores-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.intro-proveedores-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   SECCIÓN REQUISITOS
+   ============================================ */
+.requisitos-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.section-title-proveedores {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description-proveedores {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.requisito-card {
+  background: white;
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #007bff;
+  height: 100%;
+}
+
+.requisito-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+  border-top-color: #0056b3;
+}
+
+.requisito-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.requisito-card:hover .requisito-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.requisito-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.requisito-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================
+   SECCIÓN BENEFICIOS
+   ============================================ */
+.beneficios-proveedores-section {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  padding: 80px 20px;
+}
+
+.beneficio-proveedor-card {
+  background: white;
+  border-radius: 12px;
+  padding: 35px 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid #007bff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.beneficio-proveedor-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+}
+
+.beneficio-proveedor-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.beneficio-proveedor-card:hover .beneficio-proveedor-icon {
+  transform: scale(1.1);
+}
+
+.beneficio-proveedor-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.beneficio-proveedor-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* ============================================
+   SECCIÓN CTA
+   ============================================ */
+.cta-proveedores-section {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  padding: 80px 20px;
+}
+
+.cta-proveedores-card {
+  background: white;
+  border-radius: 15px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cta-proveedores-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-proveedores-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-proveedores-text {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.cta-proveedores-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.cta-proveedores-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+/* Modo oscuro */
+body.dark-mode .intro-proveedores-section,
+body.dark-mode .beneficios-proveedores-section {
+  background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+}
+
+body.dark-mode .requisitos-section {
+  background: #1e1e1e;
+}
+
+body.dark-mode .intro-proveedores-card,
+body.dark-mode .requisito-card,
+body.dark-mode .beneficio-proveedor-card,
+body.dark-mode .cta-proveedores-card {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-mode .intro-proveedores-text,
+body.dark-mode .requisito-text,
+body.dark-mode .beneficio-proveedor-text,
+body.dark-mode .cta-proveedores-text {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .section-title-proveedores,
+body.dark-mode .requisito-title,
+body.dark-mode .beneficio-proveedor-title,
+body.dark-mode .cta-proveedores-title {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .section-description-proveedores {
+  color: #d0d0d0 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header-proveedores .display-3 {
+    font-size: 2rem;
+  }
+
+  .intro-proveedores-title,
+  .section-title-proveedores,
+  .cta-proveedores-title {
+    font-size: 1.8rem;
+  }
+
+  .intro-proveedores-body,
+  .cta-proveedores-card {
+    padding: 35px 25px;
+  }
+
+  .intro-proveedores-text {
+    font-size: 1rem;
+  }
+}
+
+/* Footer Full Width */
+.footer-full-width {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
 </style>
 </head>
@@ -220,35 +561,100 @@ body.dark-mode .navbar-nav .nav-link {
  
     
 
-    <!-- Sección Proveedores -->
-<div class="container py-5">
-  <h2 class="text-center text-primary mb-4">Proveedores</h2>
-  <div class="row justify-content-center">
-    <div class="col-lg-8 text-center">
-      <p>
-        En <strong>Riveras del Suquía</strong>, consideramos que nuestros proveedores son aliados estratégicos 
-        fundamentales para garantizar el desarrollo eficiente y sostenible de nuestras actividades y obras.
-      </p>
-      <p>
-        Buscamos construir relaciones comerciales basadas en la transparencia, la confianza mutua y el respeto por 
-        los estándares de calidad y responsabilidad social. Valoramos especialmente a aquellos proveedores que comparten 
-        nuestro compromiso con el medio ambiente, la seguridad y la innovación.
-      </p>
-      <p>
-        Para formar parte de nuestra red de proveedores, es necesario cumplir con ciertos requisitos mínimos:
-      </p>
-      <ul class="list-unstyled text-left d-inline-block">
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>CUIT activo y constancia de inscripción vigente.</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Certificación de proveedor habilitado (si aplica).</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Compromiso con prácticas responsables y legales.</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Capacidad de respuesta rápida y entrega en tiempo y forma.</li>
-      </ul>
-
-
+<!-- Header Corporativo -->
+<div class="container-fluid page-header-proveedores">
+  <div class="header-overlay-proveedores"></div>
+  <div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 350px; position: relative; z-index: 2;">
+      <div class="header-icon-proveedores mb-3">
+        <i class="fas fa-truck"></i>
+      </div>
+      <h1 class="display-3 text-white font-weight-bold mb-3">Proveedores</h1>
+      <div class="header-divider-proveedores"></div>
+      <p class="text-white mt-3 mb-0" style="font-size: 1.1rem; opacity: 0.95;">Aliados estratégicos para el crecimiento conjunto</p>
     </div>
   </div>
 </div>
-<!-- Fin Sección Proveedores -->
+
+<!-- Introducción -->
+<section class="intro-proveedores-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="intro-proveedores-card">
+          <div class="intro-proveedores-header">
+            <i class="fas fa-handshake fa-2x mb-3"></i>
+            <h2 class="intro-proveedores-title">Nuestros Proveedores</h2>
+          </div>
+          <div class="intro-proveedores-body">
+            <p class="intro-proveedores-text">
+              En <strong>Riveras del Suquía</strong>, consideramos que nuestros proveedores son aliados estratégicos 
+              fundamentales para garantizar el desarrollo eficiente y sostenible de nuestras actividades y obras.
+            </p>
+            <p class="intro-proveedores-text">
+              Buscamos construir relaciones comerciales basadas en la transparencia, la confianza mutua y el respeto por 
+              los estándares de calidad y responsabilidad social. Valoramos especialmente a aquellos proveedores que comparten 
+              nuestro compromiso con el medio ambiente, la seguridad y la innovación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Requisitos -->
+<section class="requisitos-section py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-title-proveedores mb-3">
+          <i class="fas fa-clipboard-check text-primary mr-2"></i>Requisitos para Proveedores
+        </h2>
+        <p class="section-description-proveedores">Para formar parte de nuestra red de proveedores, es necesario cumplir con ciertos requisitos mínimos:</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="requisito-card">
+          <div class="requisito-icon">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <h4 class="requisito-title">CUIT Activo</h4>
+          <p class="requisito-text">CUIT activo y constancia de inscripción vigente.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="requisito-card">
+          <div class="requisito-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h4 class="requisito-title">Certificación</h4>
+          <p class="requisito-text">Certificación de proveedor habilitado (si aplica).</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="requisito-card">
+          <div class="requisito-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h4 class="requisito-title">Prácticas Responsables</h4>
+          <p class="requisito-text">Compromiso con prácticas responsables y legales.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="requisito-card">
+          <div class="requisito-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h4 class="requisito-title">Capacidad de Respuesta</h4>
+          <p class="requisito-text">Capacidad de respuesta rápida y entrega en tiempo y forma.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <script>
   const toggle = document.getElementById("modo-toggle");
@@ -276,12 +682,70 @@ body.dark-mode .navbar-nav .nav-link {
   });
 </script>
 
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 py-5 footer-full-width">
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a href="" class="navbar-brand">
+          <h1 class="text-primary"><span class="text-white">RIVE</span>RAS</h1>
+        </a>
+        <p>Compromiso con el territorio, el ambiente y la dignidad laboral.</p>
+        <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Seguinos</h6>
+        <div class="d-flex justify-content-start">
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.tiktok.com/@riverasdelsuquia"><i class="fab fa-tiktok"></i></a>
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/riverasdelsuquia"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.youtube.com/@RiverasdelSuquia2025"><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/riverasdelsuquia/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Nuestros Servicios</h5>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Lugar</a>
+          <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+          <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Obras</a>
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Te guiamos</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
+        <p><i class="fa fa-map-marker-alt mr-2"></i>Rafael Nuñez 4558</p>
+        <p><i class="fa fa-phone-alt mr-2"></i>3513913162</p>
+        <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com.ar</p>
+        <div style="width: 280px; height: 150px; margin-top: 15px; border: 1px solid rgba(255,255,255,0.2);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8020959884434!2d-64.23836862539997!3d-31.36443999374027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329936b187beb3%3A0xe8a8cf2c43bc0a9c!2sAv.%20Rafael%20N%C3%BA%C3%B1ez%204558%2C%20X5009CFZ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1752594078311!5m2!1ses!2sar"
+            width="100%"
+            height="150"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-dark text-white border-top py-4 footer-full-width" style="border-color: rgba(256, 256, 256, .1) !important; margin-bottom: 0 !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+        <p class="m-0 text-white-50">Copyright &copy;Riveras Del Suquía All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-6 text-center text-md-right">
+        <p class="m-0 text-white-50">Designed by Riveras Del Suquía</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
 <!-- jQuery y Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    
-    
- </body>
+</body>
 </html>

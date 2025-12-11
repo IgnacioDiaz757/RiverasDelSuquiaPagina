@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -141,6 +141,273 @@ body.dark-mode .navbar-nav .nav-link {
   color: white !important;
 }
 
+/* ============================================
+   HEADER CORPORATIVO ORIGEN
+   ============================================ */
+.page-header-origen {
+  background: linear-gradient(135deg, #7AB730 0%, #6aa02a 50%, #5a8a24 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-origen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.header-overlay-origen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.header-icon-origen {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.header-icon-origen i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.header-divider-origen {
+  width: 80px;
+  height: 4px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* ============================================
+   SECCIÓN NUESTRA COOPERATIVA
+   ============================================ */
+.nuestra-coop-section {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 20px;
+}
+
+.coop-intro-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.coop-intro-header {
+  background: linear-gradient(135deg, #7AB730 0%, #6aa02a 100%);
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.coop-intro-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.coop-intro-body {
+  padding: 40px;
+}
+
+.coop-intro-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #555;
+  margin: 0;
+}
+
+/* Cards de Información */
+.info-coop-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #7AB730;
+  height: 100%;
+}
+
+.info-coop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(122, 183, 48, 0.2);
+}
+
+.info-coop-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #7AB730, #6aa02a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.info-coop-card:hover .info-coop-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.info-coop-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.info-coop-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Logros Destacados */
+.logros-section {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logros-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.logro-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #7AB730;
+  transition: all 0.3s ease;
+}
+
+.logro-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.logro-icon {
+  font-size: 1.5rem;
+  color: #7AB730;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.logro-item span {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Galería */
+.galeria-coop-section {
+  margin-top: 50px;
+}
+
+.galeria-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.galeria-img-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-img-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.galeria-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.galeria-img-wrapper:hover .galeria-img {
+  transform: scale(1.05);
+}
+
+/* Modo oscuro */
+body.dark-mode .nuestra-coop-section {
+  background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+}
+
+body.dark-mode .coop-intro-card,
+body.dark-mode .info-coop-card,
+body.dark-mode .logros-section {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-mode .coop-intro-text,
+body.dark-mode .info-coop-text,
+body.dark-mode .logro-item span {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .info-coop-title,
+body.dark-mode .logros-title,
+body.dark-mode .galeria-title {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .logro-item {
+  background-color: #333 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header-origen .display-3 {
+    font-size: 2rem;
+  }
+
+  .coop-intro-title,
+  .logros-title,
+  .galeria-title {
+    font-size: 1.6rem;
+  }
+
+  .coop-intro-body {
+    padding: 30px 20px;
+  }
+
+  .coop-intro-text {
+    font-size: 1rem;
+  }
+}
+
 </style>
 
 
@@ -230,48 +497,138 @@ body.dark-mode .navbar-nav .nav-link {
 </div>
 <!-- Navbar End -->
 
-<!-- Descripción Cooperativa con ítems y fotos -->
-<div class="container my-5 modo-section bg-white p-4 rounded shadow" style="max-width: 900px;">
-  <h2 class="mb-4 text-primary">Nuestra Cooperativa</h2>
-  <ul class="list-unstyled">
-    <li class="mb-3">
-      <i class="fas fa-map-marker-alt text-primary mr-2"></i>
-      Nace a orillas del <strong>río Suquía</strong> en <strong>La Calera</strong>, respondiendo a las necesidades de vecinos comprometidos.
-    </li>
-    <li class="mb-3">
-      <i class="fas fa-calendar-alt text-primary mr-2"></i>
-      Fundada en <strong>2010</strong>, con más de <strong>10 años</strong> funcionando como una <em>empresa social</em>.
-    </li>
-    <li class="mb-3">
-      <i class="fas fa-people-carry text-primary mr-2"></i>
-      Generamos <strong>puestos de trabajo</strong> en todo el país y fomentamos la <em>cultura del trabajo</em>.
-    </li>
-    <li class="mb-3">
-      <i class="fas fa-tools text-primary mr-2"></i>
-      Ofrecemos mano de obra calificada en rubros como: <strong>construcción</strong>, <strong>obras civiles</strong>, <strong>paisajismo</strong>, <strong>jardinería</strong>, y <strong>carga/descarga</strong>.
-    </li>
-    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Hoy en 2025 somos más de<strong> 900 socios.</strong></li>
-    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Más de<strong> 15 años</strong> de trayectoria.</li>
-    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i><strong> 5 oficinas </strong>  y más de 14 administrativos.</li>
-    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Más de 5 vehículos propios, 2 tractores y más de 3000 herramientas.</li>
-    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Dictamos<strong> cursos y capacitaciones</strong>.</li>
-  </ul>
-
-  <!-- Galería de imágenes -->
-  <div class="row mt-4">
-    <div class="col-md-4 mb-3">
-      <img src="img/WhatsApp Image 2025-07-04 at 14.46.03 (2).webp" class="img-fluid rounded shadow-sm" alt="Obra cooperativa 1">
+<!-- Header Corporativo -->
+<div class="container-fluid page-header-origen">
+  <div class="header-overlay-origen"></div>
+  <div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px; position: relative; z-index: 2;">
+      <div class="header-icon-origen mb-3">
+        <i class="fas fa-history"></i>
+      </div>
+      <h1 class="display-3 text-white font-weight-bold mb-3">Nuestra Cooperativa</h1>
+      <div class="header-divider-origen"></div>
+      <p class="text-white mt-3 mb-0" style="font-size: 1.1rem; opacity: 0.95;">Una historia de compromiso y trabajo colectivo</p>
     </div>
-    <div class="col-md-4 mb-3">
-      <img src="img/Fececor/IMG-20220610-WA0028.webp" class="img-fluid rounded shadow-sm" alt="Obra cooperativa 2">
-    </div>
-    <div class="col-md-4 mb-3">
-      <img src="img/Fececor/IMG-20220610-WA0052.webp" class="img-fluid rounded shadow-sm" alt="Herramientas de trabajo">
-    </div>
-    <div class="text-center mt-4">
-</div>
   </div>
 </div>
+
+<!-- Sección Nuestra Cooperativa -->
+<section class="nuestra-coop-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="coop-intro-card mb-5">
+          <div class="coop-intro-header">
+            <i class="fas fa-building fa-2x mb-3"></i>
+            <h2 class="coop-intro-title">Nuestra Historia</h2>
+          </div>
+          <div class="coop-intro-body">
+            <p class="coop-intro-text">
+              Nace a orillas del <strong>río Suquía</strong> en <strong>La Calera</strong>, respondiendo a las necesidades de vecinos comprometidos con el desarrollo de su comunidad. Fundada en <strong>2010</strong>, nuestra cooperativa lleva más de <strong>15 años</strong> funcionando como una <em>empresa social</em>, generando <strong>puestos de trabajo</strong> en todo el país y fomentando la <em>cultura del trabajo</em>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cards de Información -->
+        <div class="row mb-5">
+          <div class="col-md-6 mb-4">
+            <div class="info-coop-card">
+              <div class="info-coop-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h4 class="info-coop-title">Origen</h4>
+              <p class="info-coop-text">Nacimos a orillas del <strong>río Suquía</strong> en <strong>La Calera</strong>, respondiendo a las necesidades de vecinos comprometidos con el desarrollo local y regional.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="info-coop-card">
+              <div class="info-coop-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h4 class="info-coop-title">Trayectoria</h4>
+              <p class="info-coop-text">Fundada en <strong>2010</strong>, con más de <strong>15 años</strong> de experiencia funcionando como una <em>empresa social</em> comprometida con el trabajo digno.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="info-coop-card">
+              <div class="info-coop-icon">
+                <i class="fas fa-people-carry"></i>
+              </div>
+              <h4 class="info-coop-title">Impacto Social</h4>
+              <p class="info-coop-text">Generamos <strong>puestos de trabajo</strong> en todo el país y fomentamos la <em>cultura del trabajo</em> cooperativo y solidario.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="info-coop-card">
+              <div class="info-coop-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h4 class="info-coop-title">Servicios</h4>
+              <p class="info-coop-text">Ofrecemos mano de obra calificada en rubros como: <strong>construcción</strong>, <strong>obras civiles</strong>, <strong>paisajismo</strong>, <strong>jardinería</strong>, y <strong>carga/descarga</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logros Destacados -->
+        <div class="logros-section mb-5">
+          <h3 class="logros-title text-center mb-4">
+            <i class="fas fa-trophy text-primary mr-2"></i>Logros y Reconocimientos
+          </h3>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="logro-item">
+                <i class="fas fa-check-circle logro-icon"></i>
+                <span>Dictamos <strong>cursos y capacitaciones</strong> para el desarrollo profesional de nuestros asociados.</span>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="logro-item">
+                <i class="fas fa-check-circle logro-icon"></i>
+                <span>Contamos con <strong>5 oficinas</strong> y más de <strong>14 administrativos</strong> para brindar un servicio eficiente.</span>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="logro-item">
+                <i class="fas fa-check-circle logro-icon"></i>
+                <span>Más de <strong>5 vehículos propios</strong>, <strong>2 tractores</strong> y más de <strong>3000 herramientas</strong> para nuestras obras.</span>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="logro-item">
+                <i class="fas fa-check-circle logro-icon"></i>
+                <span>Hoy en 2025 somos más de <strong>900 socios</strong> trabajando juntos por un futuro mejor.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galería de imágenes -->
+        <div class="galeria-coop-section">
+          <h3 class="galeria-title text-center mb-4">
+            <i class="fas fa-images text-primary mr-2"></i>Nuestro Trabajo en Imágenes
+          </h3>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="galeria-img-wrapper">
+                <img src="img/WhatsApp Image 2025-07-04 at 14.46.03 (2).webp" class="galeria-img" alt="Obra cooperativa 1">
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="galeria-img-wrapper">
+                <img src="img/Fececor/IMG-20220610-WA0028.webp" class="galeria-img" alt="Obra cooperativa 2">
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="galeria-img-wrapper">
+                <img src="img/Fececor/IMG-20220610-WA0052.webp" class="galeria-img" alt="Herramientas de trabajo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Cooperativa en Números Start -->
@@ -295,7 +652,7 @@ body.dark-mode .navbar-nav .nav-link {
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="service-item bg-white text-center mb-2 py-5 px-4">
           <i class="fa-solid fa-road fa-2x text-primary mb-4"></i>
-          <h2 class="text-primary mb-2 counter" data-target="30">0</h2>
+          <h2 class="text-primary mb-2 counter" data-target="180">0</h2>
           <h5 class="mb-2">Obras Realizadas</h5>
           <p class="m-0">Proyectos finalizados en distintas localidades.</p>
         </div>
@@ -331,8 +688,8 @@ body.dark-mode .navbar-nav .nav-link {
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="service-item bg-white text-center mb-2 py-5 px-4">
           <i class="fa-solid fa-car fa-2x text-primary mb-4"></i>
-          <h2 class="text-primary mb-2 counter" data-target="7">0</h2>
-          <h5 class="mb-2">5 Vehiculos, 2 tractores</h5>
+          <h2 class="text-primary mb-2 counter" data-target="8">0</h2>
+          <h5 class="mb-2">5 Vehiculos, 2 tractores, 1 colectivo.</h5>
           <p class="m-0"></p>
         </div>
       </div>
@@ -439,7 +796,7 @@ observer.observe(document.querySelector('#cooperativa-numeros'));
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
             <p><i class="fa fa-map-marker-alt mr-2"></i>Rafael Nuñez 4558</p>
-            <p><i class="fa fa-phone-alt mr-2"></i>3512606190</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>3513913162</p>
             <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com.ar</p>
             
             <!-- Mapa pequeño -->
@@ -461,10 +818,10 @@ observer.observe(document.querySelector('#cooperativa-numeros'));
 <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white-50">Copyright &copy; <a href="https://mipaginaweb-seven.vercel.app/">Ignacio Diaz</a>. All Rights Reserved.</p>
+            <p class="m-0 text-white-50">Copyright &copy; Riveras Del Suquía All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 text-center text-md-right">
-            <p class="m-0 text-white-50">Designed by Ignacio Diaz</p>
+            <p class="m-0 text-white-50">Designed by Riveras Del Suquía</p>
         </div>
     </div>
 </div>

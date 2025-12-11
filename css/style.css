@@ -10191,3 +10191,14 @@ body.dark-mode .mv-title {
 
 
 
+
+/* ============================================
+   GLOBAL RESET & FOOTER STYLES
+   ============================================ */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.footer-full-width {
+  margin-bottom: 0 !important;
+}

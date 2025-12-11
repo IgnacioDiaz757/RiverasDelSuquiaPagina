@@ -128,6 +128,214 @@ body.dark-mode .navbar-nav .nav-link {
   color: white !important;
 }
 
+/* ============================================
+   ESTILOS SECCIÓN ASOCIADOS
+   ============================================ */
+.asociados-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 80vh;
+  padding: 80px 20px;
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #7AB730, #6aa02a);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.intro-card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.intro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.intro-content {
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+}
+
+.beneficios-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.beneficio-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #7AB730;
+  text-align: center;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(122, 183, 48, 0.2);
+  border-top-color: #6aa02a;
+}
+
+.beneficio-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #7AB730, #6aa02a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.beneficio-card:hover .beneficio-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.beneficio-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.beneficio-card-text {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #7AB730 0%, #6aa02a 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(122, 183, 48, 0.3);
+  color: white;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-button {
+  background: white;
+  color: #7AB730;
+  border: none;
+  padding: 15px 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  color: #6aa02a;
+}
+
+.cta-button i {
+  margin-right: 10px;
+}
+
+/* Modo oscuro para asociados */
+body.dark-mode .asociados-section {
+  background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+}
+
+body.dark-mode .section-title {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .intro-card,
+body.dark-mode .beneficio-card {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode .beneficio-card-title {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .beneficio-card-text {
+  color: #d0d0d0 !important;
+}
+
+body.dark-mode .intro-text {
+  color: #e0e0e0 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .intro-card {
+    padding: 25px;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+  }
+  
+  .beneficios-title {
+    font-size: 1.8rem;
+  }
+  
+  .cta-card {
+    padding: 35px 25px;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -215,38 +423,103 @@ body.dark-mode .navbar-nav .nav-link {
   </div>
 </div>
 <!-- Navbar End -->
- <!-- Sección Asociados -->
-<div class="container py-5" data-aos="fade-up">
-  <h2 class="text-center text-primary mb-4" data-aos="fade-down">Asociados</h2>
-  <div class="row justify-content-center">
-    <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="200">
-      <p>
-        La cooperativa <strong>Riveras del Suquía</strong> reconoce que sus asociados son la base fundamental de su crecimiento.
-        Ser asociado implica formar parte activa de un modelo solidario que busca generar oportunidades de trabajo digno,
-        crecimiento colectivo y bienestar social.
-      </p>
-      <p data-aos="fade-left" data-aos-delay="400">
-        Ofrecemos a nuestros asociados:
-      </p>
-      <ul class="list-unstyled text-left d-inline-block" data-aos="fade-right" data-aos-delay="600">
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Participación en las asambleas.</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Capacitaciones permanentes y herramientas de formación.</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Acceso prioritario a proyectos y obras.</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Acompañamiento legal y técnico.</li>
-      </ul>
+<!-- Sección Asociados -->
+<section class="asociados-section py-5">
+  <div class="container">
+    <!-- Header de la sección -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <div class="section-header">
+          <i class="fas fa-users fa-3x text-primary mb-3"></i>
+          <h1 class="section-title">Asociados</h1>
+          <div class="title-underline"></div>
+        </div>
+      </div>
+    </div>
 
-      <p class="mt-4" data-aos="fade-up" data-aos-delay="800">
-        Si aún no sos asociado, podés unirte completando el formulario de ingreso y presentando tu documentación.
-      </p>
+    <!-- Introducción -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10">
+        <div class="intro-card">
+          <div class="intro-content">
+            <i class="fas fa-handshake fa-2x text-primary mb-3"></i>
+            <p class="intro-text">
+              La cooperativa <strong class="text-primary">Riveras del Suquía</strong> reconoce que sus asociados son la base fundamental de su crecimiento.
+              Ser asociado implica formar parte activa de un modelo solidario que busca generar oportunidades de trabajo digno,
+              crecimiento colectivo y bienestar social.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQz25YIEb2M837j-78aU-fNmSXPRT_i0Yb49ddCmSqKoUraQ/viewform?usp=dialog" 
-         class="btn btn-primary mt-3" target="_blank" data-aos="zoom-in" data-aos-delay="1000">
-        <i class="fas fa-file-download mr-2"></i>Formulario de Ingreso
-      </a>
+    <!-- Beneficios para asociados -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10">
+        <h2 class="beneficios-title text-center mb-4">
+          <i class="fas fa-star text-primary mr-2"></i>Ofrecemos a nuestros asociados
+        </h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="beneficio-card">
+              <div class="beneficio-icon">
+                <i class="fas fa-vote-yea"></i>
+              </div>
+              <h4 class="beneficio-card-title">Participación en las asambleas</h4>
+              <p class="beneficio-card-text">Formá parte de las decisiones importantes de la cooperativa y ejercé tu derecho a voto.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="beneficio-card">
+              <div class="beneficio-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h4 class="beneficio-card-title">Capacitaciones permanentes</h4>
+              <p class="beneficio-card-text">Accedé a herramientas de formación continua para tu desarrollo profesional.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="beneficio-card">
+              <div class="beneficio-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <h4 class="beneficio-card-title">Acceso prioritario a proyectos</h4>
+              <p class="beneficio-card-text">Tené prioridad en la asignación de proyectos y obras de la cooperativa.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="beneficio-card">
+              <div class="beneficio-icon">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h4 class="beneficio-card-title">Acompañamiento legal y técnico</h4>
+              <p class="beneficio-card-text">Contá con asesoramiento profesional para tus necesidades legales y técnicas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="cta-card">
+          <div class="cta-content">
+            <i class="fas fa-user-plus fa-3x text-primary mb-3"></i>
+            <h3 class="cta-title">¿Querés ser parte de nuestra cooperativa?</h3>
+            <p class="cta-text">
+              Si aún no sos asociado, podés unirte completando el formulario de ingreso y presentando tu documentación.
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQz25YIEb2M837j-78aU-fNmSXPRT_i0Yb49ddCmSqKoUraQ/viewform?usp=dialog" 
+               class="btn btn-primary btn-lg mt-3 cta-button" target="_blank">
+              <i class="fas fa-file-alt mr-2"></i>Completar Formulario de Ingreso
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
+</section>
 <!-- Fin Sección Asociados -->
  <script>
   const toggle = document.getElementById("modo-toggle");

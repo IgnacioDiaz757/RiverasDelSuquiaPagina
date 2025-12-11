@@ -147,75 +147,144 @@ body.dark-mode .navbar-nav .nav-link {
   color: #666;
 }
 
-/* Grilla de logos */
-.beneficios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
+/* Categorías de beneficios */
+.beneficio-categoria {
+  margin-bottom: 40px;
 }
 
-/* Tarjeta de cada logo */
-.empresa {
-  width: 160px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+.categoria-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #7AB730;
+  text-align: left;
+}
+
+/* Cards de beneficios */
+.beneficio-card {
   background-color: white;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc; /* Borde visible */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-/* Imagen del logo */
-.empresa img {
-  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-/* Efecto al pasar el mouse */
-.empresa:hover img {
-  transform: scale(1.05);
-  filter: grayscale(0%);
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Tooltip (beneficio al pasar el mouse) */
-.empresa::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 5px;
-  white-space: nowrap;
+.beneficio-header {
+  background: linear-gradient(135deg, #7AB730 0%, #6aa02a 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.beneficio-header h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.beneficio-header h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.beneficio-header.especial-header {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+}
+
+.beneficio-card.especial {
+  border: 3px solid #ffc107;
+}
+
+.beneficio-body {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.beneficio-desc {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.beneficio-tope {
+  font-size: 0.95rem;
+  color: #7AB730;
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+}
+
+.beneficio-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  text-align: left;
+}
+
+.beneficio-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.beneficio-list li:last-child {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 12px;
   font-size: 0.85rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-left: 10px;
 }
 
-.empresa:hover::after {
-  opacity: 1;
+.badge-info {
+  background-color: #17a2b8;
+  color: white;
 }
 body.dark-mode .beneficios-section {
   background-color: #1e1e1e !important;
 }
 
-body.dark-mode .empresa {
+body.dark-mode .categoria-title {
+  color: #f0f0f0 !important;
+  border-bottom-color: #7AB730 !important;
+}
+
+body.dark-mode .beneficio-card {
   background-color: #2a2a2a !important;
   border: 1px solid #444;
-  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .beneficio-desc {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .beneficio-list li {
+  color: #d0d0d0 !important;
+  border-bottom-color: #444 !important;
+}
+
+body.dark-mode .beneficio-tope {
+  color: #7AB730 !important;
+  border-top-color: #444 !important;
 }
 
 
@@ -310,31 +379,196 @@ body.dark-mode .empresa {
   <div class="container">
     <h2 class="section-title">Beneficios para nuestros asociados</h2>
     <p class="section-subtitle">
-      Accedé a descuentos exclusivos en estas empresas a través de nuestro convenio con <strong>Banco Patagonia</strong>
+      Accedé a descuentos exclusivos y beneficios especiales a través de nuestro convenio con <strong>Banco Patagonia</strong>
     </p>
 
-    <ul class="beneficios-grid">
-      <li class="empresa" data-tooltip="Carrefour">
-        <img src="imagenes beneficios/Diseño sin título (7).png" alt="Logo Carrefour">
-      </li>
-      <li class="empresa" data-tooltip="Changomas">
-        <img src="https://ahorrosybeneficios.bancopatagonia.com.ar/pub/media/catalog/product/cache/535dd7322fd89df55ad0692e3106f436/c/h/chango_1_2.jpg" alt="Logo Changomas">
-      </li>
-      <li class="empresa" data-tooltip="Disco">
-        <img src="https://ahorrosybeneficios.bancopatagonia.com.ar/pub/media/catalog/product/cache/535dd7322fd89df55ad0692e3106f436/d/i/disco.png" alt="Logo Disco">
-      </li>
-      <li class="empresa" data-tooltip="Vea">
-        <img src="https://ahorrosybeneficios.bancopatagonia.com.ar/pub/media/catalog/product/cache/535dd7322fd89df55ad0692e3106f436/v/e/vea.png" alt="Logo Vea">
-      </li>
-      <li class="empresa" data-tooltip="Jumbo">
-        <img src="https://ahorrosybeneficios.bancopatagonia.com.ar/pub/media/catalog/product/cache/535dd7322fd89df55ad0692e3106f436/j/u/jumbo.png" alt="Logo Jumbo">
-      </li>
-    </ul>
+    <!-- Cashback de Bienvenida -->
+    <div class="beneficio-categoria mb-5">
+      <h3 class="categoria-title"><i class="fas fa-gift text-primary mr-2"></i>Cashback de Bienvenida</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4>Cliente Singular</h4>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc">100% de descuento en tu primera compra</p>
+              <p class="beneficio-tope">Tope: $18.000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4>Cliente Plus</h4>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc">100% de descuento en tu primera compra</p>
+              <p class="beneficio-tope">Tope: $8.000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4>Cliente Clásica</h4>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc">100% de descuento en tu primera compra</p>
+              <p class="beneficio-tope">Tope: $6.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <p class="muchos-mas">✨ Y muchos más beneficios esperándote...</p>
+    <!-- Descuentos en Supermercados -->
+    <div class="beneficio-categoria mb-5">
+      <h3 class="categoria-title"><i class="fas fa-shopping-cart text-primary mr-2"></i>Descuentos en Supermercados</h3>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4><i class="fas fa-calendar-day mr-2"></i>Primera Compra</h4>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc"><strong>30% de descuento</strong> en cualquier supermercado</p>
+              <ul class="beneficio-list">
+                <li><strong>Singular:</strong> Tope $6.000 (Visa) + $6.000 (Mastercard)</li>
+                <li><strong>Plus:</strong> Tope $4.000 (Visa) + $4.000 (Mastercard)</li>
+                <li><strong>Clásica:</strong> Tope $3.000 (Visa) + $3.000 (Mastercard)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4><i class="fas fa-calendar-week mr-2"></i>Carrefour - Todos los Miércoles</h4>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc"><strong>20% de descuento</strong> con tarjetas Visa, American Express y débito</p>
+              <ul class="beneficio-list">
+                <li><strong>Singular:</strong> Tope $2.500</li>
+                <li><strong>Plus:</strong> Tope $2.000</li>
+                <li><strong>Clásica:</strong> Tope $2.000</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Otros Beneficios -->
+    <div class="beneficio-categoria mb-5">
+      <h3 class="categoria-title"><i class="fas fa-star text-primary mr-2"></i>Otros Beneficios Destacados</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4><i class="fas fa-utensils mr-2"></i>Pedidos Ya</h4>
+              <span class="badge badge-info">Jueves</span>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc"><strong>35% descuento</strong> (Singular) / <strong>30% descuento</strong> (Plus/Clásica)</p>
+              <p class="beneficio-tope">Tope: $1.500 (Singular) / $1.000 (Plus/Clásica)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4><i class="fas fa-gas-pump mr-2"></i>Combustible</h4>
+              <span class="badge badge-info">Jueves</span>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc"><strong>20% de descuento</strong> con tarjetas de crédito y débito</p>
+              <p class="beneficio-tope">Tope: $1.300 (Singular) / $1.000 (Plus)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4><i class="fas fa-hamburger mr-2"></i>Restaurantes</h4>
+              <span class="badge badge-info">Viernes</span>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc"><strong>30% descuento</strong> (Singular) / <strong>20% descuento</strong> (Plus)</p>
+              <p class="beneficio-tope">Tope: $1.500 (Singular) / $1.000 (Plus)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Club Patagonia -->
+    <div class="beneficio-categoria mb-5">
+      <div class="beneficio-card especial">
+        <div class="beneficio-header especial-header">
+          <h3><i class="fas fa-trophy text-warning mr-2"></i>Club Patagonia</h3>
+        </div>
+        <div class="beneficio-body">
+          <p class="beneficio-desc">Acumulá puntos por cada compra realizada con las tarjetas emitidas por Banco Patagonia</p>
+          <p>Canjeá tus puntos por:</p>
+          <div class="row mt-3">
+            <div class="col-md-3 text-center mb-3">
+              <i class="fas fa-box-open fa-2x text-primary mb-2"></i>
+              <p>Productos</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+              <i class="fas fa-plane fa-2x text-primary mb-2"></i>
+              <p>Viajes</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+              <i class="fas fa-heart fa-2x text-primary mb-2"></i>
+              <p>Experiencias</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+              <i class="fas fa-tags fa-2x text-primary mb-2"></i>
+              <p>Descuentos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beneficios Adicionales de la Cooperativa -->
+    <div class="beneficio-categoria">
+      <h3 class="categoria-title"><i class="fas fa-handshake text-primary mr-2"></i>Beneficios Adicionales de Riveras del Suquía</h3>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4><i class="fas fa-store mr-2"></i>Compra Asociativa</h4>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc">Compra al por mayor en el Mercado de Abasto con precios especiales para asociados</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="beneficio-card">
+            <div class="beneficio-header">
+              <h4><i class="fas fa-gavel mr-2"></i>Asesoramiento</h4>
+            </div>
+            <div class="beneficio-body">
+              <p class="beneficio-desc">Asesoramiento contable y jurídico gratuito para todos nuestros asociados</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <p class="muchos-mas">✨ Y muchos más beneficios esperándote...</p>
+      <a href="contact.html" class="btn btn-primary btn-lg mt-3">Contactanos para más información</a>
+    </div>
   </div>
 </section>
 <!-- Beneficios End -->
+
+
 
 
 
@@ -368,7 +602,7 @@ body.dark-mode .empresa {
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
             <p><i class="fa fa-map-marker-alt mr-2"></i>Rafael Nuñez 4558</p>
-            <p><i class="fa fa-phone-alt mr-2"></i>3512606190</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>3513913162</p>
             <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com.ar</p>
             
             <!-- Mapa pequeño -->
@@ -390,10 +624,10 @@ body.dark-mode .empresa {
 <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white-50">Copyright &copy; <a href="https://mipaginaweb-seven.vercel.app/">Ignacio Diaz</a>. All Rights Reserved.</p>
+            <p class="m-0 text-white-50">Copyright &copy; Riveras del Suquía All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 text-center text-md-right">
-            <p class="m-0 text-white-50">Designed by Ignacio Diaz</p>
+            <p class="m-0 text-white-50">Designed by Riveras Del Suquía</p>
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -112,65 +112,468 @@ body.dark-mode .navbar-nav .nav-link {
   color: white !important;
 }
 
-
-.emblema-section {
-  background-color: #f9f9f9;
-  border-radius: 12px;
+/* ============================================
+   HEADER CORPORATIVO COOPERATIVA
+   ============================================ */
+.page-header-cooperativa {
+  background: linear-gradient(135deg, #7AB730 0%, #6aa02a 50%, #5a8a24 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-body.dark-mode .emblema-section {
-  background-color: #1f1f1f;
+.page-header-cooperativa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
 }
 
-.emblema-img {
-  max-height: 280px;
-  border-radius: 12px;
-  background-color: white;
-  padding: 8px;
+.header-overlay-cooperativa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
-body.dark-mode .emblema-img {
-  background-color: #2c2c2c;
-  border-color: #66b2ff;
+.header-icon-cooperativa {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
 }
 
-.emblema-section h2 {
+.header-icon-cooperativa i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.header-divider-cooperativa {
+  width: 80px;
+  height: 4px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* ============================================
+   SECCIÓN DEFINICIÓN
+   ============================================ */
+.definicion-section {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 20px;
+}
+
+.definicion-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.definicion-header {
+  background: linear-gradient(135deg, #7AB730 0%, #6aa02a 100%);
+  padding: 50px 40px;
+  text-align: center;
+  color: white;
+}
+
+.definicion-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.definicion-body {
+  padding: 50px 40px;
+}
+
+.definicion-quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #7AB730;
+  padding-left: 25px;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+.definicion-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #666;
+  margin: 0;
+}
+
+/* ============================================
+   SECCIÓN EMBLEMA CORPORATIVO
+   ============================================ */
+.emblema-section-corporativo {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  padding: 80px 20px;
+}
+
+.emblema-wrapper {
+  position: relative;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.emblema-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.emblema-img-corporativo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.emblema-content {
+  padding-left: 30px;
+}
+
+.emblema-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.emblema-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #7AB730, #6aa02a);
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.emblema-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.emblema-simbolos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.simbolo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #7AB730;
+  transition: all 0.3s ease;
+}
+
+.simbolo-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.simbolo-icon {
+  font-size: 2rem;
+  color: #7AB730;
+  min-width: 40px;
+}
+
+.simbolo-item h5 {
+  font-size: 1.2rem;
   font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
 }
 
-.emblema-section p {
-  font-size: 1.05rem;
+.simbolo-item p {
+  font-size: 1rem;
+  color: #666;
   line-height: 1.6;
+  margin: 0;
 }
 
-</style>
-<style>
-  /* Estilo para el ícono en cada li */
-  ul.principios-list li {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 12px;
-    cursor: default;
-    transition: color 0.3s ease;
+/* ============================================
+   SECCIÓN TIPOS DE COOPERATIVAS
+   ============================================ */
+.tipos-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.section-title-cooperativa {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description-cooperativa {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tipo-card {
+  background: white;
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #7AB730;
+  height: 100%;
+}
+
+.tipo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(122, 183, 48, 0.2);
+  border-top-color: #6aa02a;
+}
+
+.tipo-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #7AB730, #6aa02a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.tipo-card:hover .tipo-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tipo-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.tipo-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================
+   SECCIÓN PRINCIPIOS COOPERATIVOS
+   ============================================ */
+.principios-section {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  padding: 80px 20px;
+}
+
+.principio-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid #7AB730;
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+.principio-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(122, 183, 48, 0.15);
+}
+
+.principio-card.especial {
+  border-left-width: 8px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.principio-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #7AB730, #6aa02a);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.principio-content {
+  flex: 1;
+}
+
+.principio-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.principio-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================
+   SECCIÓN BENEFICIOS COOPERATIVA
+   ============================================ */
+.beneficios-cooperativa-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.beneficio-coop-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.beneficio-coop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(122, 183, 48, 0.2);
+}
+
+.beneficio-coop-icon {
+  font-size: 3rem;
+  color: #7AB730;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.beneficio-coop-card:hover .beneficio-coop-icon {
+  transform: scale(1.1);
+}
+
+.beneficio-coop-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.beneficio-coop-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Modo oscuro */
+body.dark-mode .definicion-section,
+body.dark-mode .emblema-section-corporativo,
+body.dark-mode .principios-section {
+  background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+}
+
+body.dark-mode .tipos-section,
+body.dark-mode .beneficios-cooperativa-section {
+  background: #1e1e1e;
+}
+
+body.dark-mode .definicion-card,
+body.dark-mode .tipo-card,
+body.dark-mode .principio-card,
+body.dark-mode .beneficio-coop-card,
+body.dark-mode .emblema-wrapper {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-mode .definicion-quote,
+body.dark-mode .definicion-text,
+body.dark-mode .emblema-text,
+body.dark-mode .tipo-text,
+body.dark-mode .principio-text,
+body.dark-mode .beneficio-coop-text {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .section-title-cooperativa,
+body.dark-mode .emblema-title,
+body.dark-mode .tipo-title,
+body.dark-mode .principio-title,
+body.dark-mode .beneficio-coop-title,
+body.dark-mode .simbolo-item h5 {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .simbolo-item {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-mode .simbolo-item p {
+  color: #d0d0d0 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header-cooperativa .display-3 {
+    font-size: 2rem;
   }
 
-  ul.principios-list li::before {
-    content: "\f00c"; 
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #7AB730; 
-    font-size: 16px;
-    transition: transform 0.3s ease, color 0.3s ease;
+  .definicion-title,
+  .section-title-cooperativa {
+    font-size: 2rem;
   }
 
-  ul.principios-list li:hover::before {
-    transform: translateY(-50%) scale(1.5);
-    color: #7AB730; 
+  .definicion-body,
+  .emblema-content {
+    padding: 30px 20px;
   }
+
+  .emblema-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .definicion-quote {
+    font-size: 1.1rem;
+  }
+}
+
+/* Footer Full Width */
+.footer-full-width {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 </style>
 
 
@@ -262,94 +665,319 @@ body.dark-mode .emblema-img {
 </div>
 <!-- Navbar End -->
 
-<!-- Header Start -->
-    <div class="container-fluid page-header">
+<!-- Header Corporativo -->
+<div class="container-fluid page-header-cooperativa">
+  <div class="header-overlay-cooperativa"></div>
         <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">¿Qué es una Cooperativa?</h3>
-                <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Inicio</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">¿Qué es una Cooperativa?</p>
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 350px; position: relative; z-index: 2;">
+      <div class="header-icon-cooperativa mb-3">
+        <i class="fas fa-hands-helping"></i>
                 </div>
+      <h1 class="display-3 text-white font-weight-bold mb-3">¿Qué es una Cooperativa?</h1>
+      <div class="header-divider-cooperativa"></div>
+      <p class="text-white mt-3 mb-0" style="font-size: 1.1rem; opacity: 0.95;">Un modelo de trabajo basado en la solidaridad y la democracia</p>
             </div>
         </div>
     </div>
 
-<!-- Cooperativa de Trabajo Start -->
-<div class="container py-5">
-  <div class="text-center mb-4">
-    <h2 class="text-primary text-uppercase" style="letter-spacing: 2px;"></h2>
-    <h4 class="text-dark dark-text">Nuestra Cooperativa de Trabajo</h4>
+<!-- Definición de Cooperativa -->
+<section class="definicion-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="definicion-card">
+          <div class="definicion-header">
+            <i class="fas fa-building fa-2x mb-3"></i>
+            <h2 class="definicion-title">Definición de Cooperativa</h2>
   </div>
-  <div class="card shadow-sm border-0 rounded bg-white dark-bg p-4">
-    <p class="text-muted dark-text">
+          <div class="definicion-body">
+            <blockquote class="definicion-quote">
       "Una Cooperativa es una asociación autónoma de personas que se han unido voluntariamente
       para hacer frente a sus necesidades y aspiraciones económicas, sociales y culturales comunes
       por medio de una empresa de propiedad conjunta y democráticamente controlada."
-    </p>
-    <p class="text-muted dark-text">
-      "Cada Cooperativa es una empresa, en el sentido que es una entidad organizada que funciona
-      en el mercado, por lo tanto debe esforzarse para servir a sus miembros eficiente y eficazmente"
-  </div>
-     <section class="emblema-section py-5 px-3">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Imagen del emblema -->
-      <div class="col-md-5 text-center mb-4 mb-md-0">
-        <img src="img/pinos-297x300.webp" alt="Emblema de la Cooperativa" class="img-fluid emblema-img">
+            </blockquote>
+            <p class="definicion-text">
+              Cada Cooperativa es una empresa, en el sentido que es una entidad organizada que funciona
+              en el mercado, por lo tanto debe esforzarse para servir a sus miembros eficiente y eficazmente.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <!-- Texto explicativo -->
-      <div class="col-md-7">
-        <h2 class="mb-3 text-primary">Emblema del Cooperativismo</h2>
-        <p class="text-justify">
-          El emblema de la Cooperativa representa los valores fundamentales de unidad, trabajo colectivo y compromiso con la comunidad. Cada elemento gráfico fue pensado para reflejar nuestra misión: mejorar la calidad de vida de nuestros asociados y contribuir al desarrollo sostenible del entorno.
-        </p>
-        <p class="text-justify">
-          Los dos pinos significan que se necesitan dos o más personas para que haya cooperación.
-          El circulo representa al mundo que todo abarca y todo lo contiene. Es también simbolo
-          de plenitud.Así es el cooperativismo. Necesitamos de la cooperacion de los demás.
-          El color de los pinos y del circulo es el verde oscuro, color de casi todas las plantas.
-          Ellas nos ayudan a subsistir supliendo parte de nuestra alimentación. La cooperación 
-          por su parte, nos da el alimento para el espíritu. El color verde representa la vida,
-          la cooperación es parte de todas las forma de vida.
-             El fondo del circulo es amarillo oro. Representa el sol que es fuente de vida para el
-             hombre, las plantas y los animales. La cooperación es parte esencial en la vida.
-             Sin ella no podemos concebir un mundo feliz. Por eso todas nuestras esperanzas descansan
-             en la cooperación.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
 
-</div>
-<!-- Principios y Valores del Cooperativismo -->
-<div class="card shadow-sm border-0 rounded bg-white dark-bg p-4 mt-4">
-  <h3 class="text-primary text-uppercase" style="letter-spacing: 2px;">Principios Cooperativos</h3>
-  <p class="text-muted dark-text text-justify">
-    Los principios y valores del cooperativismo son mucho más que una base estructural: son una manera de entender el trabajo, la economía y la vida en comunidad. Este modelo se apoya en la ayuda mutua, la solidaridad, la igualdad de oportunidades y el compromiso de caminar juntos, construyendo día a día un futuro más justo y equitativo para todas y todos.
-  </p>
-  <p class="text-muted dark-text text-justify">
-    Creemos que cada persona cuenta, que todas las voces merecen ser escuchadas y que el progreso verdadero es aquel que se comparte. Por eso, estos principios no son solo ideas, sino acciones concretas que guían nuestro hacer:
-  </p>
-  <ul class="text-muted dark-text principios-list">
-    <li><strong>Membresía abierta y voluntaria:</strong> Toda persona que quiera sumarse, sin importar su origen, tiene la posibilidad de formar parte. Lo importante es compartir el compromiso y los valores cooperativos.</li>
-    <li><strong>Control democrático de los miembros:</strong> Acá no hay jerarquías impuestas: cada integrante tiene voz y voto. Las decisiones se toman entre todos, de forma participativa y transparente.</li>
-    <li><strong>Participación económica equitativa:</strong> Lo que generamos como cooperativa se distribuye de manera justa. Todos aportamos, todos recibimos, en función del trabajo y del esfuerzo compartido.</li>
-    <li><strong>Autonomía e independencia:</strong> Somos dueños de nuestras decisiones. Actuamos con libertad y responsabilidad, sin depender de intereses ajenos a nuestro proyecto común.</li>
-    <li><strong>Educación, capacitación e información:</strong> Creemos en el aprendizaje constante. Por eso, nos formamos y compartimos conocimientos para seguir creciendo como personas y como comunidad cooperativa.</li>
-    <li><strong>Cooperación entre cooperativas:</strong> No competimos, nos apoyamos. La unión con otras cooperativas fortalece el movimiento y nos permite llegar más lejos, sin dejar a nadie atrás.</li>
-    <li><strong>Compromiso con la comunidad:</strong> Somos parte de un entorno, de un barrio, de una historia. Trabajamos no solo por nosotros, sino por mejorar la vida de quienes nos rodean.</li>
-  </ul>
-  <p class="text-muted dark-text text-justify">
-    Este es el corazón del cooperativismo: poner en el centro a las personas, confiar en la fuerza colectiva y construir con valores un mundo más humano.
-  </p>
-</div>
+<!-- Emblema del Cooperativismo -->
+<section class="emblema-section-corporativo py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5 text-center mb-4 mb-lg-0">
+        <div class="emblema-wrapper">
+          <img src="img/pinos-297x300.webp" alt="Emblema del Cooperativismo" class="emblema-img-corporativo">
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="emblema-content">
+          <h2 class="emblema-title">
+            <i class="fas fa-seedling text-primary mr-2"></i>Emblema del Cooperativismo
+          </h2>
+          <div class="emblema-divider"></div>
+          <p class="emblema-text">
+          El emblema de la Cooperativa representa los valores fundamentales de unidad, trabajo colectivo y compromiso con la comunidad. Cada elemento gráfico fue pensado para reflejar nuestra misión: mejorar la calidad de vida de nuestros asociados y contribuir al desarrollo sostenible del entorno.
+        </p>
+          <div class="emblema-simbolos">
+            <div class="simbolo-item">
+              <i class="fas fa-tree simbolo-icon"></i>
+              <div>
+                <h5>Los Dos Pinos</h5>
+                <p>Significan que se necesitan dos o más personas para que haya cooperación. Representan la necesidad de trabajar juntos.</p>
+              </div>
+            </div>
+            <div class="simbolo-item">
+              <i class="fas fa-circle simbolo-icon"></i>
+              <div>
+                <h5>El Círculo</h5>
+                <p>Representa al mundo que todo abarca y todo lo contiene. Es también símbolo de plenitud y unidad.</p>
+              </div>
+            </div>
+            <div class="simbolo-item">
+              <i class="fas fa-palette simbolo-icon"></i>
+              <div>
+                <h5>Los Colores</h5>
+                <p><strong>Verde oscuro:</strong> Representa la vida y la naturaleza. <strong>Amarillo oro:</strong> Simboliza el sol, fuente de vida y energía.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Tipos de Cooperativas -->
+<section class="tipos-section py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-title-cooperativa mb-3">Tipos de Cooperativas</h2>
+        <p class="section-description-cooperativa">Existen diferentes tipos de cooperativas según su actividad principal</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="tipo-card">
+          <div class="tipo-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h4 class="tipo-title">Cooperativa de Trabajo</h4>
+          <p class="tipo-text">Asociación de trabajadores que se organizan para prestar servicios o producir bienes. Los asociados son a la vez trabajadores y dueños.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="tipo-card">
+          <div class="tipo-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h4 class="tipo-title">Cooperativa de Consumo</h4>
+          <p class="tipo-text">Asociación de consumidores que se unen para adquirir bienes y servicios de mejor calidad y a mejores precios.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="tipo-card">
+          <div class="tipo-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h4 class="tipo-title">Cooperativa de Crédito</h4>
+          <p class="tipo-text">Organización financiera propiedad de sus miembros, que ofrece servicios de ahorro y crédito con condiciones favorables.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Principios Cooperativos -->
+<section class="principios-section py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-title-cooperativa mb-3">
+          <i class="fas fa-star text-primary mr-2"></i>Principios Cooperativos
+        </h2>
+        <p class="section-description-cooperativa">
+          Los principios y valores del cooperativismo son mucho más que una base estructural: son una manera de entender el trabajo, la economía y la vida en comunidad. Este modelo se apoya en la ayuda mutua, la solidaridad, la igualdad de oportunidades y el compromiso de caminar juntos.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="principio-card">
+          <div class="principio-number">1</div>
+          <div class="principio-content">
+            <h4 class="principio-title">Membresía Abierta y Voluntaria</h4>
+            <p class="principio-text">Toda persona que quiera sumarse, sin importar su origen, tiene la posibilidad de formar parte. Lo importante es compartir el compromiso y los valores cooperativos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="principio-card">
+          <div class="principio-number">2</div>
+          <div class="principio-content">
+            <h4 class="principio-title">Control Democrático</h4>
+            <p class="principio-text">Cada integrante tiene voz y voto. Las decisiones se toman entre todos, de forma participativa y transparente. No hay jerarquías impuestas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="principio-card">
+          <div class="principio-number">3</div>
+          <div class="principio-content">
+            <h4 class="principio-title">Participación Económica Equitativa</h4>
+            <p class="principio-text">Lo que generamos como cooperativa se distribuye de manera justa. Todos aportamos, todos recibimos, en función del trabajo y del esfuerzo compartido.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="principio-card">
+          <div class="principio-number">4</div>
+          <div class="principio-content">
+            <h4 class="principio-title">Autonomía e Independencia</h4>
+            <p class="principio-text">Somos dueños de nuestras decisiones. Actuamos con libertad y responsabilidad, sin depender de intereses ajenos a nuestro proyecto común.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="principio-card">
+          <div class="principio-number">5</div>
+          <div class="principio-content">
+            <h4 class="principio-title">Educación, Capacitación e Información</h4>
+            <p class="principio-text">Creemos en el aprendizaje constante. Por eso, nos formamos y compartimos conocimientos para seguir creciendo como personas y como comunidad cooperativa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="principio-card">
+          <div class="principio-number">6</div>
+          <div class="principio-content">
+            <h4 class="principio-title">Cooperación entre Cooperativas</h4>
+            <p class="principio-text">No competimos, nos apoyamos. La unión con otras cooperativas fortalece el movimiento y nos permite llegar más lejos, sin dejar a nadie atrás.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 mb-4">
+        <div class="principio-card especial">
+          <div class="principio-number">7</div>
+          <div class="principio-content">
+            <h4 class="principio-title">Compromiso con la Comunidad</h4>
+            <p class="principio-text">Somos parte de un entorno, de un barrio, de una historia. Trabajamos no solo por nosotros, sino por mejorar la vida de quienes nos rodean. Este es el corazón del cooperativismo: poner en el centro a las personas, confiar en la fuerza colectiva y construir con valores un mundo más humano.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios del Modelo Cooperativo -->
+<section class="beneficios-cooperativa-section py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-title-cooperativa mb-3">Beneficios del Modelo Cooperativo</h2>
+        <p class="section-description-cooperativa">Ventajas de formar parte de una cooperativa</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="beneficio-coop-card">
+          <i class="fas fa-users-cog beneficio-coop-icon"></i>
+          <h5 class="beneficio-coop-title">Democracia Participativa</h5>
+          <p class="beneficio-coop-text">Cada miembro tiene voz y voto en las decisiones importantes</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="beneficio-coop-card">
+          <i class="fas fa-chart-line beneficio-coop-icon"></i>
+          <h5 class="beneficio-coop-title">Distribución Justa</h5>
+          <p class="beneficio-coop-text">Los beneficios se distribuyen equitativamente entre todos</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="beneficio-coop-card">
+          <i class="fas fa-graduation-cap beneficio-coop-icon"></i>
+          <h5 class="beneficio-coop-title">Capacitación Continua</h5>
+          <p class="beneficio-coop-text">Acceso a formación y desarrollo profesional constante</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="beneficio-coop-card">
+          <i class="fas fa-shield-alt beneficio-coop-icon"></i>
+          <h5 class="beneficio-coop-title">Estabilidad Laboral</h5>
+          <p class="beneficio-coop-text">Trabajo formal con todos los beneficios y protecciones</p>
+        </div>
+      </div>
+</div>
+</div>
+</section>
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 py-5 footer-full-width">
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a href="" class="navbar-brand">
+          <h1 class="text-primary"><span class="text-white">RIVE</span>RAS</h1>
+        </a>
+        <p>Compromiso con el territorio, el ambiente y la dignidad laboral.</p>
+        <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Seguinos</h6>
+        <div class="d-flex justify-content-start">
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.tiktok.com/@riverasdelsuquia"><i class="fab fa-tiktok"></i></a>
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/riverasdelsuquia"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.youtube.com/@RiverasdelSuquia2025"><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/riverasdelsuquia/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Nuestros Servicios</h5>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Lugar</a>
+          <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+          <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Obras</a>
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Te guiamos</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
+        <p><i class="fa fa-map-marker-alt mr-2"></i>Rafael Nuñez 4558</p>
+        <p><i class="fa fa-phone-alt mr-2"></i>3513913162</p>
+        <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com.ar</p>
+        <div style="width: 280px; height: 150px; margin-top: 15px; border: 1px solid rgba(255,255,255,0.2);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8020959884434!2d-64.23836862539997!3d-31.36443999374027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329936b187beb3%3A0xe8a8cf2c43bc0a9c!2sAv.%20Rafael%20N%C3%BA%C3%B1ez%204558%2C%20X5009CFZ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1752594078311!5m2!1ses!2sar"
+            width="100%"
+            height="150"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-dark text-white border-top py-4 footer-full-width" style="border-color: rgba(256, 256, 256, .1) !important; margin-bottom: 0 !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+        <p class="m-0 text-white-50">Copyright &copy;Riveras Del Suquía All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-6 text-center text-md-right">
+        <p class="m-0 text-white-50">Designed by Riveras Del Suquía</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
 
 <script>
   const toggle = document.getElementById("modo-toggle");
@@ -381,25 +1009,25 @@ body.dark-mode .emblema-img {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const emblemaImg = document.querySelector('.emblema-img');
+    const emblemaImg = document.querySelector('.emblema-img-corporativo');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          emblemaImg.classList.add('visible');
-          observer.unobserve(emblemaImg); // Solo animar 1 vez
-        }
+    if (emblemaImg) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            emblemaImg.classList.add('visible');
+            observer.unobserve(emblemaImg);
+          }
+        });
+      }, {
+        threshold: 0.1
       });
-    }, {
-      threshold: 0.1 // Cuando el 10% esté visible
-    });
 
-    observer.observe(emblemaImg);
+      observer.observe(emblemaImg);
+    }
   });
 </script>
 </body>
 </html>
-
-    <!-- Header End -->
 
 

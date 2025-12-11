@@ -95,94 +95,215 @@
 
 <style>
 
-   .mv-container {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 16px;
-    text-align: center;
+  /* ============================================
+     HEADER CORPORATIVO
+     ============================================ */
+  .page-header-corporativo {
+    background: linear-gradient(135deg, #7AB730 0%, #6aa02a 50%, #5a9020 100%);
+    position: relative;
+    overflow: hidden;
   }
 
-  .mv-header {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #000000;
+  .page-header-corporativo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
   }
 
-  .mv-toggle {
-    width: 100%;
-    background-color: #004911;
-    color: #fff;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    text-align: left;
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
 
-  .mv-toggle:hover {
-    background-color: #004911;
+  .header-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
   }
 
-  .mv-content {
-    display: none;
-    background-color: #39da4e;
-    color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    text-align: left;
+  .header-icon i {
+    font-size: 2.5rem;
+    color: white;
   }
 
-  .mv-content p {
-    margin: 0;
-    font-size: 17px;
+  .header-divider {
+    width: 80px;
+    height: 4px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 2px;
+  }
+
+  /* ============================================
+     SECCIÓN MISIÓN Y VISIÓN CORPORATIVA
+     ============================================ */
+  .mv-section-corporativo {
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 20px;
+  }
+
+  .section-subtitle {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    color: #666;
     line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Cards Corporativas */
+  .mv-card-corporativo {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mv-card-corporativo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(122, 183, 48, 0.15);
+    border-color: #7AB730;
+  }
+
+  .card-header-custom {
+    background: linear-gradient(135deg, #7AB730 0%, #6aa02a 100%);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+  }
+
+  .icon-wrapper {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+  }
+
+  .mv-card-corporativo:hover .icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .icon-wrapper i {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  .card-title-custom {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .card-body-custom {
+    padding: 40px 35px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .content-wrapper {
+    width: 100%;
+  }
+
+  .card-text-custom {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+    text-align: justify;
+  }
+
+  .card-footer-custom {
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+
+  .accent-line {
+    height: 4px;
+    background: linear-gradient(90deg, #7AB730, #6aa02a);
+    width: 100%;
   }
 
   /* Modo oscuro */
-  body.dark-mode .mv-header {
-    color: #90caf9;
+  body.dark-mode .mv-section-corporativo {
+    background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
   }
 
-  body.dark-mode .mv-toggle {
-    background-color: #263238;
-    color: #fff;
+  body.dark-mode .section-subtitle {
+    color: #f0f0f0 !important;
   }
 
-  body.dark-mode .mv-toggle:hover {
-    background-color: #37474f;
+  body.dark-mode .section-description {
+    color: #d0d0d0 !important;
   }
 
-  body.dark-mode .mv-content {
-    background-color: #1f1f1f;
-    color: #e0e0e0;
+  body.dark-mode .mv-card-corporativo {
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
   }
-  
 
-  /* Modo oscuro */
-  body.dark-mode .mv-box {
-    background-color: #1f1f1f !important;
+  body.dark-mode .card-text-custom {
     color: #e0e0e0 !important;
   }
 
-  body.dark-mode .mv-title {
-    color: #90caf9 !important;
-  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .page-header-corporativo .display-3 {
+      font-size: 2rem;
+    }
 
-  body.dark-mode .mv-text {
-    color: #cccccc !important;
-  }
+    .section-subtitle {
+      font-size: 1.8rem;
+    }
 
-.titulo-principal span {
-  color: #212121; /* oscuro en modo claro */
-}
+    .card-title-custom {
+      font-size: 1.5rem;
+    }
 
-body.dark-mode .titulo-principal span {
-  color: #ffffff; /* claro en modo oscuro */
-} 
+    .card-body-custom {
+      padding: 30px 25px;
+    }
+
+    .card-text-custom {
+      font-size: 1rem;
+      text-align: left;
+    }
+  } 
 
 body.dark-mode .navbar-nav.bg-white {
   background-color: #2c2c2c !important;
@@ -279,46 +400,72 @@ body.dark-mode .navbar-nav .nav-link {
   </div>
 </div>
 <!-- Navbar End -->
-  <!-- Header -->
-  <div class="container-fluid page-header">
+  <!-- Header Corporativo -->
+  <div class="container-fluid page-header-corporativo">
+    <div class="header-overlay"></div>
     <div class="container">
-      <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-        <h3 class="display-4 text-white text-uppercase">MISIÓN/VISIÓN</h3>
-        <div class="d-inline-flex text-white">
-          <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-          <i class="fa fa-angle-double-right pt-1 px-3"></i>
-          <p class="m-0 text-uppercase">MISIÓN/VISIÓN</p>
+      <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 350px; position: relative; z-index: 2;">
+        <div class="header-icon mb-3">
+          <i class="fas fa-building"></i>
         </div>
+        <h1 class="display-3 text-white font-weight-bold mb-3">Misión y Visión</h1>
+        <div class="header-divider"></div>
+        <p class="text-white mt-3 mb-0" style="font-size: 1.1rem; opacity: 0.95;">Los pilares que guían nuestro compromiso</p>
       </div>
     </div>
   </div>
 
-<!-- Misión y Visión Mejorado -->
-<section class="mv-section py-5">
+<!-- Misión y Visión Corporativo -->
+<section class="mv-section-corporativo py-5">
   <div class="container">
-    <h2 class="text-center mb-4 titulo-principal"><span>Conocé más sobre nosotros</span></h2>
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-subtitle mb-3">Nuestros Valores Fundamentales</h2>
+        <p class="section-description">Conocé los principios que orientan nuestro trabajo y compromiso con la comunidad</p>
+      </div>
+    </div>
 
     <div class="row align-items-stretch">
       <!-- Misión -->
-      <div class="col-md-6 mb-4">
-        <div class="mv-card h-100">
-          <div class="p-4">
-            <h3 class="mv-title mb-3"><i class="fas fa-bullseye mr-2"></i>Misión</h3>
-            <p class="mv-text">
-              Nuestra misión es fomentar el crecimiento integral de nuestros asociados, sus familias y la comunidad en general, promoviendo una economía solidaria, inclusiva y participativa. Trabajamos para brindar soluciones reales y sostenibles, priorizando el bienestar colectivo por encima del lucro individual.
-            </p>
+      <div class="col-lg-6 mb-4">
+        <div class="mv-card-corporativo h-100">
+          <div class="card-header-custom">
+            <div class="icon-wrapper">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="card-title-custom">Misión</h3>
+          </div>
+          <div class="card-body-custom">
+            <div class="content-wrapper">
+              <p class="card-text-custom">
+                Nuestra misión es fomentar el crecimiento integral de nuestros asociados, sus familias y la comunidad en general, promoviendo una economía solidaria, inclusiva y participativa. Trabajamos para brindar soluciones reales y sostenibles, priorizando el bienestar colectivo por encima del lucro individual.
+              </p>
+            </div>
+          </div>
+          <div class="card-footer-custom">
+            <div class="accent-line"></div>
           </div>
         </div>
       </div>
 
       <!-- Visión -->
-      <div class="col-md-6 mb-4">
-        <div class="mv-card h-100">
-          <div class="p-4">
-            <h3 class="mv-title mb-3"><i class="fas fa-eye mr-2"></i>Visión</h3>
-            <p class="mv-text">
-              Ser una cooperativa sólida, innovadora y referente regional, comprometida con el desarrollo social, económico y ambiental. Queremos inspirar una gestión participativa que genere igualdad de oportunidades, inclusión y transformación social sustentable.
-            </p>
+      <div class="col-lg-6 mb-4">
+        <div class="mv-card-corporativo h-100">
+          <div class="card-header-custom">
+            <div class="icon-wrapper">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3 class="card-title-custom">Visión</h3>
+          </div>
+          <div class="card-body-custom">
+            <div class="content-wrapper">
+              <p class="card-text-custom">
+                Ser una cooperativa sólida, innovadora y referente regional, comprometida con el desarrollo social, económico y ambiental. Queremos inspirar una gestión participativa que genere igualdad de oportunidades, inclusión y transformación social sustentable.
+              </p>
+            </div>
+          </div>
+          <div class="card-footer-custom">
+            <div class="accent-line"></div>
           </div>
         </div>
       </div>
@@ -343,45 +490,46 @@ body.dark-mode .navbar-nav .nav-link {
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Nuestros Servicios</h5>
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Enlaces Rápidos</h5>
             <div class="d-flex flex-column justify-content-start">
+                <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
                 <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
-                <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Lugar</a>
                 <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
                 <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Obras</a>
-                <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Te guiamos</a>
+                <a class="text-white-50 mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
             </div>
         </div>
-        
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Enlaces Populares</h5>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white-50 mb-2" href="misionvision.html"><i class="fa fa-angle-right mr-2"></i>Misión y Visión</a>
+                <a class="text-white-50 mb-2" href="origencoop.html"><i class="fa fa-angle-right mr-2"></i>Origen Cooperativo</a>
+                <a class="text-white-50 mb-2" href="ConsejoDeHigieneySeguridad.html"><i class="fa fa-angle-right mr-2"></i>Consejo de Higiene y Seguridad</a>
+                <a class="text-white-50 mb-2" href="ServiciosFecescor.html"><i class="fa fa-angle-right mr-2"></i>Servicios Fecescor</a>
+                <a class="text-white-50 mb-2" href="ServiciosAlmacenEpec.html"><i class="fa fa-angle-right mr-2"></i>Servicios Almacén EPEC</a>
+            </div>
+        </div>
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
             <p><i class="fa fa-map-marker-alt mr-2"></i>Rafael Nuñez 4558</p>
-            <p><i class="fa fa-phone-alt mr-2"></i>3512606190</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>3513913162</p>
             <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com.ar</p>
-            
-            <!-- Mapa pequeño -->
-            <div style="width: 280px; height: 150px; margin-top: 15px; border: 1px solid rgba(255,255,255,0.2);">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8020959884434!2d-64.23836862539997!3d-31.36443999374027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329936b187beb3%3A0xe8a8cf2c43bc0a9c!2sAv.%20Rafael%20N%C3%BA%C3%B1ez%204558%2C%20X5009CFZ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1752594078311!5m2!1ses!2sar"
-    width="100%"
-    height="150"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
-
+            <div class="position-relative" style="height: 150px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8020959884434!2d-64.23836862539997!3d-31.36443999374027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329936b187beb3%3A0xe8a8cf2c43bc0a9c!2sAv.%20Rafael%20N%C3%BA%C3%B1ez%204558%2C%20X5009CFZ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1752594078311!5m2!1ses!2sar"
+                    width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </div>
 </div>
 <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white-50">Copyright &copy; <a href="https://mipaginaweb-seven.vercel.app/">Ignacio Diaz</a>. All Rights Reserved.</p>
+            <p class="m-0 text-white-50">Copyright &copy; Riveras Del Suquía All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 text-center text-md-right">
-            <p class="m-0 text-white-50">Designed by Ignacio Diaz</p>
+            <p class="m-0 text-white-50">Designed by Riveras Del Suquía</p>
         </div>
     </div>
 </div>

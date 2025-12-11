@@ -128,7 +128,288 @@ body.dark-mode .navbar-nav .nav-link {
   color: white !important;
 }
 
+/* ============================================
+   HEADER CORPORATIVO SEGURIDAD
+   ============================================ */
+.page-header-seguridad {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 50%, #bd2130 100%);
+  position: relative;
+  overflow: hidden;
+}
 
+.page-header-seguridad::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.header-overlay-seguridad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.header-icon-seguridad {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.header-icon-seguridad i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.header-divider-seguridad {
+  width: 80px;
+  height: 4px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* ============================================
+   SECCIÓN DOCUMENTOS
+   ============================================ */
+.documentos-section {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 20px;
+}
+
+.section-title-seguridad {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description-seguridad {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.documento-card {
+  background: white;
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #dc3545;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.documento-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(220, 53, 69, 0.2);
+  border-top-color: #c82333;
+}
+
+.documento-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.documento-card:hover .documento-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.documento-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.documento-desc {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.documento-link {
+  display: inline-flex;
+  align-items: center;
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.documento-link:hover {
+  color: #c82333;
+  text-decoration: none;
+}
+
+/* ============================================
+   SECCIÓN COMPROMISO
+   ============================================ */
+.compromiso-section {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  padding: 80px 20px;
+}
+
+.compromiso-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.compromiso-header {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  padding: 50px 40px;
+  text-align: center;
+  color: white;
+}
+
+.compromiso-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.compromiso-divider {
+  width: 100px;
+  height: 4px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.compromiso-body {
+  padding: 50px 40px;
+}
+
+.compromiso-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* ============================================
+   GALERÍA DE IMÁGENES
+   ============================================ */
+.galeria-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.imagen-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-seguridad {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imagen-wrapper:hover .imagen-seguridad {
+  transform: scale(1.05);
+}
+
+/* Modo oscuro */
+body.dark-mode .documentos-section,
+body.dark-mode .compromiso-section {
+  background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+}
+
+body.dark-mode .galeria-section {
+  background: #1e1e1e;
+}
+
+body.dark-mode .section-title-seguridad {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .section-description-seguridad {
+  color: #d0d0d0 !important;
+}
+
+body.dark-mode .documento-card,
+body.dark-mode .compromiso-card {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode .documento-title {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .documento-desc {
+  color: #d0d0d0 !important;
+}
+
+body.dark-mode .compromiso-text {
+  color: #e0e0e0 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header-seguridad .display-3 {
+    font-size: 2rem;
+  }
+
+  .section-title-seguridad {
+    font-size: 1.8rem;
+  }
+
+  .compromiso-title {
+    font-size: 2rem;
+  }
+
+  .compromiso-body {
+    padding: 35px 25px;
+  }
+
+  .compromiso-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
 
 </style>
 </head>
@@ -218,81 +499,141 @@ body.dark-mode .navbar-nav .nav-link {
 </div>
 <!-- Navbar End -->
 
- <!-- Service Start -->
-<div class="container-fluid py-5">
-  <div class="container pt-5 pb-3">
-    <div class="text-center mb-3 pb-3">
-      <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">HIGIENE Y SEGURIDAD</h6>
-      <h1></h1>
+<!-- Header Corporativo -->
+<div class="container-fluid page-header-seguridad">
+  <div class="header-overlay-seguridad"></div>
+  <div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 350px; position: relative; z-index: 2;">
+      <div class="header-icon-seguridad mb-3">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h1 class="display-3 text-white font-weight-bold mb-3">Consejo de Higiene y Seguridad</h1>
+      <div class="header-divider-seguridad"></div>
+      <p class="text-white mt-3 mb-0" style="font-size: 1.1rem; opacity: 0.95;">Comprometidos con tu seguridad y bienestar</p>
     </div>
+  </div>
+</div>
+
+<!-- Documentos y Recursos -->
+<section class="documentos-section py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-title-seguridad mb-3">Documentos y Recursos</h2>
+        <p class="section-description-seguridad">Accedé a nuestros materiales de capacitación y protocolos de seguridad</p>
+      </div>
+    </div>
+
     <div class="row">
-
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="service-item bg-white text-center mb-2 py-5 px-4">
-          <a href="documentos/GUIA RAPIDA DE PRIMEROS AUXILIOS (1).pdf" style="color: inherit; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
-            <i class="fa fa-2x fa-kit-medical"></i>
-            <h5 class="mb-0">Primeros Auxilios</h5>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="documento-card">
+          <div class="documento-icon">
+            <i class="fas fa-kit-medical"></i>
+          </div>
+          <h5 class="documento-title">Primeros Auxilios</h5>
+          <p class="documento-desc">Guía rápida de primeros auxilios</p>
+          <a href="documentos/GUIA RAPIDA DE PRIMEROS AUXILIOS (1).pdf" class="documento-link" target="_blank">
+            <i class="fas fa-download mr-2"></i>Descargar PDF
           </a>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="service-item bg-white text-center mb-2 py-5 px-4">
-          <a href="documentos/Protocolo de Emergencia y Accidentes de Trabajo . (1).pdf" style="color: inherit; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
-            <i class="fa fa-2x fa-person-falling-burst"></i>
-            <h5 class="mb-0">Consejos</h5>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="documento-card">
+          <div class="documento-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h5 class="documento-title">Protocolo de Emergencia</h5>
+          <p class="documento-desc">Protocolo de emergencia y accidentes</p>
+          <a href="documentos/Protocolo de Emergencia y Accidentes de Trabajo . (1).pdf" class="documento-link" target="_blank">
+            <i class="fas fa-download mr-2"></i>Descargar PDF
           </a>
         </div>
       </div>
 
-      <!-- Card Parte 1 -->
-<div class="col-lg-4 col-md-6 mb-4">
-  <div class="service-item bg-white text-center mb-2 py-5 px-4" style="display: flex; flex-direction: column; gap: 15px;">
-    <a href="documentos/Manual_Extenso_Seguridad_Obras (1).pdf (1).pdf" target="_blank" 
-       style="color: inherit; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
-      <i class="fa fa-2x fa-book-open"></i>
-      <h5 class="mb-0">Material Teórico Parte 1</h5>
-    </a>
-  </div>
-</div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="documento-card">
+          <div class="documento-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h5 class="documento-title">Material Teórico Parte 1</h5>
+          <p class="documento-desc">Manual extenso de seguridad en obras</p>
+          <a href="documentos/Manual_Extenso_Seguridad_Obras (1).pdf (1).pdf" class="documento-link" target="_blank">
+            <i class="fas fa-download mr-2"></i>Descargar PDF
+          </a>
+        </div>
+      </div>
 
-<!-- Card Parte 2 -->
-<div class="col-lg-4 col-md-6 mb-4">
-  <div class="service-item bg-white text-center mb-2 py-5 px-4" style="display: flex; flex-direction: column; gap: 15px;">
-    <a href="documentos/Reglamento Interno de Seguridad e Higiene en Obra (1) (1).pdf.pdf" target="_blank" 
-       style="color: inherit; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
-      <i class="fa fa-2x fa-book-open"></i>
-      <h5 class="mb-0">Material Teórico Parte 2</h5>
-    </a>
-  </div>
-</div>
-
-
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="documento-card">
+          <div class="documento-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h5 class="documento-title">Material Teórico Parte 2</h5>
+          <p class="documento-desc">Reglamento interno de seguridad e higiene</p>
+          <a href="documentos/Reglamento Interno de Seguridad e Higiene en Obra (1) (1).pdf.pdf" class="documento-link" target="_blank">
+            <i class="fas fa-download mr-2"></i>Descargar PDF
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-
-
-   <!-- Sección centrada -->
-      <p class="mx-auto" style="max-width: 700px;" text-align: center>
-    <strong>La cooperativa está firmemente comprometida con la higiene y la seguridad laboral como pilares fundamentales de su funcionamiento diario. Entendemos que un entorno de trabajo seguro no solo protege la salud física y mental de cada trabajador, sino que también mejora la productividad, el compañerismo y la calidad del servicio que ofrecemos a la comunidad.
-
-Nuestra prioridad es prevenir accidentes, enfermedades profesionales y situaciones de riesgo. Para lograrlo, promovemos el uso correcto de los Elementos de Protección Personal (EPP), realizamos capacitaciones periódicas y aseguramos el cumplimiento de normas claras y prácticas responsables en cada sector de trabajo.
-
-En este camino, la participación activa de cada integrante es esencial. La seguridad no es solo una responsabilidad institucional: es una cultura compartida, un compromiso colectivo que construimos entre todos.
-
-Creemos que cuidar al otro es también cuidarnos a nosotros mismos. Por eso, desde la cooperativa seguiremos fortaleciendo nuestras políticas de prevención, apostando al bienestar y fomentando un ambiente laboral sano, ordenado y seguro para todos.</strong>
-  </p>
-</div>
-<div class="container text-center my-5">
-  <div class="row justify-content-center mb-4">
-    <div class="col-md-6">
-      <img src="documentos/WhatsApp Image 2025-07-25 at 11.54.23.jpeg" alt="Higiene y Seguridad 1" class="img-fluid rounded shadow mb-3">
-      <img src="documentos/WhatsApp Image 2025-07-25 at 11.54.17.jpeg" alt="Higiene y Seguridad 2" class="img-fluid rounded shadow">
+<!-- Compromiso con la Seguridad -->
+<section class="compromiso-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="compromiso-card">
+          <div class="compromiso-header">
+            <i class="fas fa-heart fa-2x mb-3"></i>
+            <h2 class="compromiso-title">Nuestro Compromiso</h2>
+            <div class="compromiso-divider"></div>
+          </div>
+          <div class="compromiso-body">
+            <p class="compromiso-text">
+              La cooperativa está firmemente comprometida con la higiene y la seguridad laboral como pilares fundamentales de su funcionamiento diario. Entendemos que un entorno de trabajo seguro no solo protege la salud física y mental de cada trabajador, sino que también mejora la productividad, el compañerismo y la calidad del servicio que ofrecemos a la comunidad.
+            </p>
+            <p class="compromiso-text">
+              Nuestra prioridad es prevenir accidentes, enfermedades profesionales y situaciones de riesgo. Para lograrlo, promovemos el uso correcto de los Elementos de Protección Personal (EPP), realizamos capacitaciones periódicas y aseguramos el cumplimiento de normas claras y prácticas responsables en cada sector de trabajo.
+            </p>
+            <p class="compromiso-text">
+              En este camino, la participación activa de cada integrante es esencial. La seguridad no es solo una responsabilidad institucional: es una cultura compartida, un compromiso colectivo que construimos entre todos.
+            </p>
+            <p class="compromiso-text mb-0">
+              Creemos que cuidar al otro es también cuidarnos a nosotros mismos. Por eso, desde la cooperativa seguiremos fortaleciendo nuestras políticas de prevención, apostando al bienestar y fomentando un ambiente laboral sano, ordenado y seguro para todos.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Galería de Imágenes -->
+<section class="galeria-section py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-title-seguridad mb-3">En Acción</h2>
+        <p class="section-description-seguridad">Nuestro equipo trabajando con los más altos estándares de seguridad</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 mb-4">
+        <div class="imagen-wrapper">
+          <img src="documentos/WhatsApp Image 2025-07-25 at 11.54.23.jpeg" alt="Higiene y Seguridad 1" class="imagen-seguridad">
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="imagen-wrapper">
+          <img src="documentos/WhatsApp Image 2025-07-25 at 11.54.17.jpeg" alt="Higiene y Seguridad 2" class="imagen-seguridad">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
     <div class="row pt-5">
@@ -323,7 +664,7 @@ Creemos que cuidar al otro es también cuidarnos a nosotros mismos. Por eso, des
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
             <p><i class="fa fa-map-marker-alt mr-2"></i>Rafael Nuñez 4558</p>
-            <p><i class="fa fa-phone-alt mr-2"></i>3512606190</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>3513913162</p>
             <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com.ar</p>
             
             <!-- Mapa pequeño -->
@@ -345,10 +686,10 @@ Creemos que cuidar al otro es también cuidarnos a nosotros mismos. Por eso, des
 <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white-50">Copyright &copy; <a href="https://mipaginaweb-seven.vercel.app/">Ignacio Diaz</a>. All Rights Reserved.</p>
+            <p class="m-0 text-white-50">Copyright &copy;Riveras Del Suquía All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 text-center text-md-right">
-            <p class="m-0 text-white-50">Designed by Ignacio Diaz</p>
+            <p class="m-0 text-white-50">Designed by Riveras Del Suquía</p>
         </div>
     </div>
 </div>

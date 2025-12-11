@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -128,7 +128,232 @@ body.dark-mode .navbar-nav .nav-link {
   color: white !important;
 }
 
+/* ============================================
+   HEADER CORPORATIVO CONTRATISTAS
+   ============================================ */
+.page-header-contratistas {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #17a2b8 100%);
+  position: relative;
+  overflow: hidden;
+}
 
+.page-header-contratistas::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.header-overlay-contratistas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.header-icon-contratistas {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.header-icon-contratistas i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.header-divider-contratistas {
+  width: 80px;
+  height: 4px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* ============================================
+   SECCIÓN INTRODUCCIÓN
+   ============================================ */
+.intro-contratistas-section {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 20px;
+}
+
+.intro-contratistas-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.intro-contratistas-header {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  padding: 50px 40px;
+  text-align: center;
+  color: white;
+}
+
+.intro-contratistas-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.intro-contratistas-body {
+  padding: 50px 40px;
+}
+
+.intro-contratistas-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.intro-contratistas-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   SECCIÓN REQUISITOS
+   ============================================ */
+.requisitos-contratistas-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.section-title-contratistas {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description-contratistas {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.requisito-contratista-card {
+  background: white;
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #28a745;
+  height: 100%;
+}
+
+.requisito-contratista-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(40, 167, 69, 0.2);
+  border-top-color: #20c997;
+}
+
+.requisito-contratista-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.requisito-contratista-card:hover .requisito-contratista-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.requisito-contratista-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.requisito-contratista-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Modo oscuro */
+body.dark-mode .intro-contratistas-section {
+  background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+}
+
+body.dark-mode .requisitos-contratistas-section {
+  background: #1e1e1e;
+}
+
+body.dark-mode .intro-contratistas-card,
+body.dark-mode .requisito-contratista-card {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-mode .intro-contratistas-text,
+body.dark-mode .requisito-contratista-text {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .section-title-contratistas,
+body.dark-mode .requisito-contratista-title {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .section-description-contratistas {
+  color: #d0d0d0 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header-contratistas .display-3 {
+    font-size: 2rem;
+  }
+
+  .intro-contratistas-title,
+  .section-title-contratistas {
+    font-size: 1.8rem;
+  }
+
+  .intro-contratistas-body {
+    padding: 30px 20px;
+  }
+
+  .intro-contratistas-text {
+    font-size: 1rem;
+  }
+}
+
+/* Footer Full Width */
+.footer-full-width {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
 </style>
 </head>
@@ -219,34 +444,99 @@ body.dark-mode .navbar-nav .nav-link {
 <!-- Navbar End -->
  
 
-  <!-- Sección Contratistas -->
-<div class="container py-5">
-  <h2 class="text-center text-primary mb-4">Contratistas</h2>
-  <div class="row justify-content-center">
-    <div class="col-lg-8 text-center">
-      <p>
-        En <strong>Riveras del Suquía</strong> valoramos el trabajo colaborativo con clientes comprometidos, 
-        responsables y alineados a nuestros valores de calidad, seguridad y desarrollo sostenible.
-      </p>
-      <p>
-        Nuestra cooperativa establece acuerdos con clientes para potenciar la ejecución de obras,
-        garantizando siempre el cumplimiento de las normativas vigentes, la protección de los trabajadores
-        y el respeto por el entorno comunitario.
-      </p>
-      <p>
-        Para colaborar con nosotros como contratista, se requiere:
-      </p>
-      <ul class="list-unstyled text-left d-inline-block">
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Documentación legal y técnica actualizada.</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Cumplimiento de protocolos de higiene y seguridad.</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Experiencia comprobable en obras similares.</li>
-        <li><i class="fas fa-check-circle text-primary mr-2"></i>Compromiso con la calidad y los plazos de entrega.</li>
-      </ul>
-
+<!-- Header Corporativo -->
+<div class="container-fluid page-header-contratistas">
+  <div class="header-overlay-contratistas"></div>
+  <div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 350px; position: relative; z-index: 2;">
+      <div class="header-icon-contratistas mb-3">
+        <i class="fas fa-handshake"></i>
+      </div>
+      <h1 class="display-3 text-white font-weight-bold mb-3">Contratistas</h1>
+      <div class="header-divider-contratistas"></div>
+      <p class="text-white mt-3 mb-0" style="font-size: 1.1rem; opacity: 0.95;">Trabajo colaborativo con compromiso y calidad</p>
     </div>
   </div>
 </div>
-<!-- Fin Sección Contratistas -->
+
+<!-- Introducción -->
+<section class="intro-contratistas-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="intro-contratistas-card">
+          <div class="intro-contratistas-header">
+            <i class="fas fa-building fa-2x mb-3"></i>
+            <h2 class="intro-contratistas-title">Nuestros Contratistas</h2>
+          </div>
+          <div class="intro-contratistas-body">
+            <p class="intro-contratistas-text">
+              En <strong>Riveras del Suquía</strong> valoramos el trabajo colaborativo con clientes comprometidos, 
+              responsables y alineados a nuestros valores de calidad, seguridad y desarrollo sostenible.
+            </p>
+            <p class="intro-contratistas-text">
+              Nuestra cooperativa establece acuerdos con clientes para potenciar la ejecución de obras,
+              garantizando siempre el cumplimiento de las normativas vigentes, la protección de los trabajadores
+              y el respeto por el entorno comunitario.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Requisitos -->
+<section class="requisitos-contratistas-section py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-title-contratistas mb-3">
+          <i class="fas fa-clipboard-check text-primary mr-2"></i>Requisitos para Contratistas
+        </h2>
+        <p class="section-description-contratistas">Para colaborar con nosotros como contratista, se requiere:</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="requisito-contratista-card">
+          <div class="requisito-contratista-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h4 class="requisito-contratista-title">Documentación Legal</h4>
+          <p class="requisito-contratista-text">Documentación legal y técnica actualizada.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="requisito-contratista-card">
+          <div class="requisito-contratista-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4 class="requisito-contratista-title">Higiene y Seguridad</h4>
+          <p class="requisito-contratista-text">Cumplimiento de protocolos de higiene y seguridad.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="requisito-contratista-card">
+          <div class="requisito-contratista-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h4 class="requisito-contratista-title">Experiencia</h4>
+          <p class="requisito-contratista-text">Experiencia comprobable en obras similares.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="requisito-contratista-card">
+          <div class="requisito-contratista-icon">
+            <i class="fas fa-check-double"></i>
+          </div>
+          <h4 class="requisito-contratista-title">Compromiso</h4>
+          <p class="requisito-contratista-text">Compromiso con la calidad y los plazos de entrega.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
  <script>
   const toggle = document.getElementById("modo-toggle");
   const icono = document.getElementById("icono-modo");
@@ -273,11 +563,70 @@ body.dark-mode .navbar-nav .nav-link {
   });
 </script>
 
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 py-5 footer-full-width">
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a href="" class="navbar-brand">
+          <h1 class="text-primary"><span class="text-white">RIVE</span>RAS</h1>
+        </a>
+        <p>Compromiso con el territorio, el ambiente y la dignidad laboral.</p>
+        <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Seguinos</h6>
+        <div class="d-flex justify-content-start">
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.tiktok.com/@riverasdelsuquia"><i class="fab fa-tiktok"></i></a>
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/riverasdelsuquia"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-outline-primary btn-square mr-2" href="https://www.youtube.com/@RiverasdelSuquia2025"><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/riverasdelsuquia/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Nuestros Servicios</h5>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Lugar</a>
+          <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+          <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Obras</a>
+          <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Te guiamos</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
+        <p><i class="fa fa-map-marker-alt mr-2"></i>Rafael Nuñez 4558</p>
+        <p><i class="fa fa-phone-alt mr-2"></i>3513913162</p>
+        <p><i class="fa fa-envelope mr-2"></i>contacto.rdelsuquia@gmail.com.ar</p>
+        <div style="width: 280px; height: 150px; margin-top: 15px; border: 1px solid rgba(255,255,255,0.2);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8020959884434!2d-64.23836862539997!3d-31.36443999374027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329936b187beb3%3A0xe8a8cf2c43bc0a9c!2sAv.%20Rafael%20N%C3%BA%C3%B1ez%204558%2C%20X5009CFZ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1752594078311!5m2!1ses!2sar"
+            width="100%"
+            height="150"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-dark text-white border-top py-4 footer-full-width" style="border-color: rgba(256, 256, 256, .1) !important; margin-bottom: 0 !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+        <p class="m-0 text-white-50">Copyright &copy;Riveras Del Suquía All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-6 text-center text-md-right">
+        <p class="m-0 text-white-50">Designed by Riveras Del Suquía</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
 <!-- jQuery y Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  
-
- </body>
+</body>
 </html>
